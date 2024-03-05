@@ -1,8 +1,2 @@
-bird
-cat
-cows
-dog
-horse
-mouse
-pig
-sheep
+Boletus_edulis
+Tylopilus_felleus
