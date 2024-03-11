@@ -216,14 +216,14 @@ filesElement.addEventListener('change', evt => {
   }
 });
 
-const demoStatusElement = document.getElementById('status');
-const status = msg => demoStatusElement.innerText = msg;
+//const demoStatusElement = document.getElementById('status');
+//const status = msg => demoStatusElement.innerText = msg;
 
 const predictionsElement = document.getElementById('predictions');
 
-const dropfieldElement = document.getElementById('div1');
-dropfieldElement.addEventListener("dragenter", allowDrop, false);
-dropfieldElement.addEventListener("dragover", allowDrop, false);
-dropfieldElement.addEventListener("drop", drop, false);
+//const dropfieldElement = document.getElementById('div1');
+//dropfieldElement.addEventListener("dragenter", allowDrop, false);
+//dropfieldElement.addEventListener("dragover", allowDrop, false);
+//dropfieldElement.addEventListener("drop", drop, false);
 
 mobilenetDemo();
