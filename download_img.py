@@ -21,12 +21,12 @@ def download_image(url, folder, count):
 
 # Read multimedia file and download images
 downloaded_count = 0
-with open('multimedia_boletus_edulis.txt', 'r', encoding='utf-8') as file:
+with open('multimedia_Hygrophoropsis_Aurantiaca.txt', 'r', encoding='utf-8') as file:
     next(file)  # Skip header
     for line in file:
         if downloaded_count >= 3000:
             break
         data = line.strip().split('\t')
         if data[1] == 'StillImage' and data[2] == 'image/jpeg':
-            download_image(data[3], 'Boletus edulis', downloaded_count)  # Change 'images' to desired folder name
+            download_image(data[3], 'Hygrophoropsis_Aurantiaca', downloaded_count)  # Change 'images' to desired folder name
             downloaded_count += 1
