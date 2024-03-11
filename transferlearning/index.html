@@ -52,7 +52,12 @@ limitations under the License.
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-  }
+    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+    width: 100%; /* Take up the full width of its container */
+    box-sizing: border-box; /* Include padding and border in the width */
+    text-align: center; /* Center the content horizontally */
+}
+
   
   #files {
     position: absolute;
@@ -60,6 +65,8 @@ limitations under the License.
     right: 0;
     bottom: 0;
     left: 0;
+    width: 100%; /* Take up the full width of its parent container */
+    height: 100%; /* Take up the full height of its parent container */
     font-size: 100px;
     opacity: 0;
     cursor: pointer;
