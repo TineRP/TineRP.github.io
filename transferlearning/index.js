@@ -56,7 +56,7 @@ const TOPK_PREDICTIONS = 2;
 
 let mobilenet;
 const mobilenetDemo = async () => {
-  status('Loading model...');
+  //status('Loading model...');
 
   mobilenet = await tf.loadLayersModel(MOBILENET_MODEL_PATH);
 
@@ -65,7 +65,7 @@ const mobilenetDemo = async () => {
   // value of `predict`.
   mobilenet.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
 
-  status('');
+  //status('');
 
   // Make a prediction through the locally hosted cat.jpg.
   const catElement = document.getElementById('cat');
@@ -87,7 +87,7 @@ const mobilenetDemo = async () => {
  * probabilities of the top K classes.
  */
 async function predict(imgElement) {
-  status('Predicting...');
+  //status('Predicting...');
 
   // The first start time includes the time it takes to extract the image
   // from the HTML and preprocess it, in additon to the predict() call.
@@ -115,8 +115,8 @@ async function predict(imgElement) {
   const classes = await getTopKClasses(logits, TOPK_PREDICTIONS);
   const totalTime1 = performance.now() - startTime1;
   const totalTime2 = performance.now() - startTime2;
-  status(`Done in ${Math.floor(totalTime1)} ms ` +
-      `(not including preprocessing: ${Math.floor(totalTime2)} ms)`);
+  //status(`Done in ${Math.floor(totalTime1)} ms ` +
+    //  `(not including preprocessing: ${Math.floor(totalTime2)} ms)`);
 
   // Show the classes in the DOM.
   showResults(imgElement, classes);
