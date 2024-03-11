@@ -53,6 +53,10 @@ limitations under the License.
     padding: 10px;
     border: 1px solid #aaaaaa;
   }
+
+  #files {
+    color: blue
+  }
 </style>
 
 <!-- TensorFlow.js script -->
@@ -66,7 +70,7 @@ limitations under the License.
   <div class="tfjs-example-container">
     <section>
       <div id="file-container" style="display: none">
-        Upload an image: <input type="file" id="files" name="files[]" multiple />
+        <input type="file" id="files" name="files[]" multiple />
       </div>
       <br>
       <div id="predictions"></div>
