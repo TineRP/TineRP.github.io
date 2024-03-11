@@ -43,12 +43,26 @@ limitations under the License.
     padding-right: 20px;
   }
 
-  #file-container {
-    margin-bottom: 20px;
-  }
 
-  #file-container input[type="file"]{
-    color: blue
+  #file-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(135, 188, 135);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  #files {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 100px;
+    opacity: 0;
+    cursor: pointer;
   }
 
   
@@ -73,6 +87,7 @@ limitations under the License.
     <section>
       <div id="file-container" style="display: none">
         <input type="file" id="files" name="files[]" multiple />
+        <label for="files" id="file-upload-button">Upload Image</label>
       </div>
       <br>
       <div id="predictions"></div>
