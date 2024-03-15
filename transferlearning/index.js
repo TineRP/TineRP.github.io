@@ -79,7 +79,7 @@ async function predict(imgElement) {
   //status('Predicting...');
 
   // Open new page
-  window.location.href = 'suggestions/suggestions.html'
+  //window.location.href = 'suggestions/suggestions.html'
 
   // The first start time includes the time it takes to extract the image
   // from the HTML and preprocess it, in additon to the predict() call.
@@ -143,7 +143,7 @@ export async function getTopKClasses(logits, topK) {
   for (let i = 0; i < topkIndices.length; i++) {
     topClassesAndProbs.push({
       className: IMAGENET_CLASSES[topkIndices[i]],
-      probability: topkValues[i]
+      probability: topkValues[i],
     })
   }
   return topClassesAndProbs;
@@ -153,7 +153,11 @@ export async function getTopKClasses(logits, topK) {
 // UI
 //
 
-function showResults(document, imgElement, classes) {
+const mapping = {}
+mapping["Boletus_edulis"] = "Spiselig"
+mapping["Tylopilus_felleus"] = "Uspiselig"
+
+function showResults(imgElement, classes) {
   const predictionContainer = document.createElement('div');
   predictionContainer.className = 'pred-container';
 
@@ -176,12 +180,20 @@ function showResults(document, imgElement, classes) {
     probsElement.innerText = classes[i].probability.toFixed(3);
     row.appendChild(probsElement);
 
+    const edibilityElement = document.createElement('div');
+    edibilityElement.className = 'cell';
+    edibilityElement.innerText = mapping[classes[i].className]
+    row.appendChild(edibilityElement);
+
     probsContainer.appendChild(row);
   }
   predictionContainer.appendChild(probsContainer);
 
   predictionsElement.insertBefore(
       predictionContainer, predictionsElement.firstChild);
+
+  const files = document.getElementById('file-container');
+  files.style.display = "none";    
 }
 
 const filesElement = document.getElementById('files');
