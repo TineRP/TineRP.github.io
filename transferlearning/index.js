@@ -78,9 +78,6 @@ const mobilenetDemo = async () => {
 async function predict(imgElement) {
   //status('Predicting...');
 
-  // Open new page
-  //window.location.href = 'suggestions/suggestions.html'
-
   // The first start time includes the time it takes to extract the image
   // from the HTML and preprocess it, in additon to the predict() call.
   const startTime1 = performance.now();
@@ -216,6 +213,10 @@ function showResults(imgElement, classes) {
   eftertjekButton.id = "eftertjekButton";
   eftertjekButton.innerText = "Eftertjek model";
   eftertjekButton.style.width = IMAGE_SIZE + "px";
+  eftertjekButton.addEventListener('click', function() {
+    // Open new page
+    window.location.href = 'tjek/tjek.html'
+});
 
   predictionsElement.appendChild(document.createElement('br'));
   predictionsElement.appendChild(eftertjekButton);
