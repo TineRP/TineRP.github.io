@@ -4,6 +4,8 @@
     align-items: center; /* Vertically center the content */
     height: 100vh; /* Make sure the container takes up the full viewport height */
     flex-direction: column;
+    width: 100%;
+    max-width: 100%;
 }
 
   
