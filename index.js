@@ -215,7 +215,7 @@ function showResults(imgElement, classes) {
   eftertjekButton.style.width = IMAGE_SIZE + "px";
   eftertjekButton.addEventListener('click', function() {
     // Open new page
-    window.location.href = 'tjek/tjek.html'
+    window.location.href = 'skov/tjek.html'
 });
 
   predictionsElement.appendChild(document.createElement('br'));
