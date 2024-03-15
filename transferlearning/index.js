@@ -212,6 +212,13 @@ function showResults(imgElement, classes) {
 
   predictionContainer.style.margin = "auto";
 
+  const eftertjekButton = document.createElement('button');
+  eftertjekButton.id = "eftertjekButton";
+  eftertjekButton.innerText = "Eftertjek model";
+  eftertjekButton.style.width = IMAGE_SIZE + "px";
+
+  predictionsElement.appendChild(document.createElement('br'));
+  predictionsElement.appendChild(eftertjekButton);
 }
 
 const filesElement = document.getElementById('files');
