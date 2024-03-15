@@ -1,0 +1,39 @@
+#question-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100%; /* Make sure the container takes up the full viewport height */
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    
+}
+
+#month-dropdown {
+    background-color: rgb(135, 188, 135);
+    color: white;
+    border-color: rgb(135, 188, 135);
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: none;
+    width: 80%;
+    height: 5%;
+    text-align: center;
+    font-size: 40px;
+  }
+
+option {
+    width: 100%;
+    height: 5%;
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+
+#seasons {
+    width:100%;
+}
