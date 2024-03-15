@@ -153,9 +153,15 @@ export async function getTopKClasses(logits, topK) {
 // UI
 //
 
-const mapping = {}
-mapping["Boletus_edulis"] = "Spiselig"
-mapping["Tylopilus_felleus"] = "Uspiselig"
+// Mapping whether the mushroom is edible, non-edible or poisonous
+const edible = {}
+edible["Boletus_edulis"] = "Spiselig"
+edible["Tylopilus_felleus"] = "Uspiselig"
+
+const icon = {}
+icon["Spiselig"] = "😀"
+icon["Uspiselig"] = "😒"
+icon["Giftig"] = "☠️"
 
 function showResults(imgElement, classes) {
   const predictionContainer = document.createElement('div');
@@ -182,11 +188,20 @@ function showResults(imgElement, classes) {
 
     const edibilityElement = document.createElement('div');
     edibilityElement.className = 'cell';
-    edibilityElement.innerText = mapping[classes[i].className]
+    edibilityElement.innerText = icon[edible[classes[i].className]]
     row.appendChild(edibilityElement);
 
     probsContainer.appendChild(row);
   }
+
+  const iconTranslation = document.createElement('div');
+  iconTranslation.innerText = "Spiselig = 😀 Uspiselig = 😒 Giftig = ☠️";
+  iconTranslation.style.fontSize = "11px";
+  iconTranslation.style.textAlign = "left";
+
+  probsContainer.appendChild(document.createElement('br'));
+  probsContainer.appendChild(iconTranslation)
+
   predictionContainer.appendChild(probsContainer);
 
   predictionsElement.insertBefore(
@@ -194,6 +209,9 @@ function showResults(imgElement, classes) {
 
   const files = document.getElementById('file-container');
   files.style.display = "none";    
+
+  predictionContainer.style.margin = "auto";
+
 }
 
 const filesElement = document.getElementById('files');
