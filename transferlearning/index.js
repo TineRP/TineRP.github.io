@@ -33,6 +33,7 @@ function drop(ev) {
       img.width = IMAGE_SIZE;
       img.height = IMAGE_SIZE;
       img.onload = () => predict(img);
+
     };
   
   //reader.onload = function(e){
@@ -77,6 +78,9 @@ const mobilenetDemo = async () => {
 async function predict(imgElement) {
   //status('Predicting...');
 
+  // Open new page
+  window.location.href = 'suggestions/suggestions.html'
+
   // The first start time includes the time it takes to extract the image
   // from the HTML and preprocess it, in additon to the predict() call.
   const startTime1 = performance.now();
@@ -105,6 +109,8 @@ async function predict(imgElement) {
   const totalTime2 = performance.now() - startTime2;
   //status(`Done in ${Math.floor(totalTime1)} ms ` +
     //  `(not including preprocessing: ${Math.floor(totalTime2)} ms)`);
+
+
 
   // Show the classes in the DOM.
   showResults(imgElement, classes);
@@ -147,7 +153,7 @@ export async function getTopKClasses(logits, topK) {
 // UI
 //
 
-function showResults(imgElement, classes) {
+function showResults(document, imgElement, classes) {
   const predictionContainer = document.createElement('div');
   predictionContainer.className = 'pred-container';
 
