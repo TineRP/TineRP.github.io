@@ -18,6 +18,10 @@ for (let i = 0; i < Object.keys(information).length; i++) {
     container.appendChild(button);
 }
 
+const button = document.createElement("button");
+button.textContent = "I tvivl";
+container.append(button);
+
 const buttons = document.querySelectorAll('#buttons-container button');
 
 buttons.forEach(button => {
