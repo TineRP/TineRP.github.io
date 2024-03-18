@@ -152,8 +152,8 @@ export async function getTopKClasses(logits, topK) {
 
 // Mapping whether the mushroom is edible, non-edible or poisonous
 const edible = {}
-edible["Boletus_edulis"] = "Spiselig"
-edible["Tylopilus_felleus"] = "Uspiselig"
+edible["Boletus_edulis"] = ["Spiselig"]
+edible["Tylopilus_felleus"] = ["Uspiselig"]
 
 const icon = {}
 icon["Spiselig"] = "😀"
@@ -214,6 +214,9 @@ function showResults(imgElement, classes) {
   eftertjekButton.innerText = "Eftertjek model";
   eftertjekButton.style.width = IMAGE_SIZE + "px";
   eftertjekButton.addEventListener('click', function() {
+    //Save classes in local storage
+    localStorage.setItem('classes', JSON.stringify(classes))
+    
     // Open new page
     window.location.href = 'skov/tjek.html'
 });
