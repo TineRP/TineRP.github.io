@@ -152,8 +152,42 @@ export async function getTopKClasses(logits, topK) {
 
 // Mapping whether the mushroom is edible, non-edible or poisonous
 const edible = {}
-edible["Boletus_edulis"] = ["Spiselig"]
-edible["Tylopilus_felleus"] = ["Uspiselig"]
+edible["Boletus_edulis"] = ["Spiselig","skov","tid","Brun"]
+edible["Tylopilus_felleus"] = ["Uspiselig","skov","tid","Gul"]
+
+// spiselighed, sted, tid, farve på hætte
+const information = {}
+information["Karl Johan"] = ["Spiselig", "løvskov,nåleskov","jul,aug,sep,okt","Brun"]
+information["Galderørhat"] = ["Uspiselig", "løvskov,nåleskov","jun,jul,aug,sep,okt","Brun"]
+information["Sommer Rørhat"] = ["Spiselig","løvskov","jun,jul,aug,sep,okt,nov","Brun"]
+information["Satans Rørhat"] = ["Giftig","løvskov","jul,aug,sep","Hvid"]
+information["Almindelig Kantarel"] = ["Spiselig","løvskov,nåleskov","jun,jul,aug,sep,okt,nov","Gul"]
+information["Almindelig Orangekantarel"] = ["Uspiselig","nåleskov","sep,okt,nov","Orange"]
+information["Bleg Kantarel"] = ["Spiselig","løvskov","jun,jul,aug,sep,okt", "Gul"]
+information["Almindelig Østershat"] = ["Spiselig","løvskov,nåleskov","jan,feb,mar,apr,maj,jun,jul,aug,sep,okt,nov,dec","gråbrun"]
+information["Gummihat"] = ["Upiselig","løvskov","okt,nov,dec,jan,feb,mar","Olivengrøn/gulbrun"]
+information["Sommer Østershat"] = ["Spiselig","løvskov","maj,jun,jul,aug,sep,okt","Brun"]
+information["Kridthat"] = ["Giftig","nåleskov","aug,sep,okt,nov","Kridhvid"]
+information["Almindelig Pigsvamp"] = ["Spiselig", "løvskov", "aug,sep,okt,nov","Cremefarvet"]
+information["Navle-Pigsvamp"] = ["Spiselig", "løvskov", "aug,sep,okt,nov,dec,jan","Gul"]
+information["Småskællet Kødpigsvamp"] = ["Uspiselig", "nåleskov", "jun,jul,aug,sep,okt","Mørkelilla skæl på brunlig baggrund"]
+information["Skællet Stilkporesvamp"] = ["Spiselig", "løvskov", "apr,maj,jun,jul,aug,sep","Brunlige skæl på hvidlig baggrund"]
+information["Mark-Champignon"] = ["Spiselig", "græs", "jul,aug,sep,okt","Hvid"]
+information["Ager-Champignon"] = ["Spiselig", "græs", "jun,jul,aug,sep,okt","Hvid"]
+information["Karbol-Champignon"] = ["Giftig", "løvskov,nåleskov", "jul,aug,sep,okt","Hvid"]
+information["Krystal-Støvbold"] = ["Spiselig", "løvskov,nåleskov", "aug,sep,okt","Hvid"]
+
+// Function to filter information based on classes
+function filterInformationByClasses(information, classes) {
+  const filteredInformation = {};
+  for (const className in information) {
+      if (classes[className] != "undefined") {
+          filteredInformation[className] = information[className];
+      }
+  }
+  return filteredInformation;
+}
+
 
 const icon = {}
 icon["Spiselig"] = "😀"
@@ -214,9 +248,17 @@ function showResults(imgElement, classes) {
   eftertjekButton.innerText = "Eftertjek model";
   eftertjekButton.style.width = IMAGE_SIZE + "px";
   eftertjekButton.addEventListener('click', function() {
-    //Save classes in local storage
-    localStorage.setItem('classes', JSON.stringify(classes))
     
+    // Filter information based on classes
+    const filteredInformation = filterInformationByClasses(edible, classes);
+    
+
+    
+
+    //Save classes and relevant information in local storage
+    localStorage.setItem('information', JSON.stringify(filteredInformation))
+    
+
     // Open new page
     window.location.href = 'skov/tjek.html'
 });

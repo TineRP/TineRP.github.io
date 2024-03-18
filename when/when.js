@@ -6,6 +6,6 @@ options.forEach(option => {
     });
 });
 
-const storedData = localStorage.getItem('classes')
-localStorage.setItem('classes', JSON.stringify(JSON.parse(storedData)))
+const storedData = localStorage.getItem('information')
+localStorage.setItem('information', JSON.stringify(JSON.parse(storedData)))
 console.log(storedData)
