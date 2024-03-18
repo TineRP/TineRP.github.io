@@ -1,14 +1,5 @@
-const buttons = document.querySelectorAll('#month-dropdown');
-
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        window.location.href = '../when/when.html'
-    });
-});
-
 const storedData = localStorage.getItem('information')
 const information = JSON.parse(storedData)
-console.log(information)
 
 // Get the first class name
 //const firstClassName = Object.keys(filteredInformation)[0];
@@ -18,18 +9,19 @@ console.log(information)
 // Accessing the first element of the first array
 //const firstElementOfFirstArray = filteredInformation[firstClassName][0];
 
+const container = document.getElementById('buttons-container')
 
-const question_container = document.getElementById('question-container')
-
-for (let i = 0; i < information.length; i++) {
+for (let i = 0; i < Object.keys(information).length; i++) {
     const button = document.createElement("button");
-
     const className = Object.keys(information)[i];
-
     button.textContent = information[className][3];
-    console.log(button.textContent)
-
-    question_container.appendChild(button);
-
+    container.appendChild(button);
 }
 
+const buttons = document.querySelectorAll('#buttons-container button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        //window.location.href = '../when/when.html'
+    });
+});
