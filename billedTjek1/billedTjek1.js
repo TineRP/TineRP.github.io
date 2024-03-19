@@ -56,6 +56,8 @@ for (let i = 1; i <= 4 ; i ++){
 
     const imgElement = document.createElement("img");
     imgElement.src = path
+    imgElement.style.width = "150px"
+    imgElement.style.height = "150px"
 
     const imageContainer = document.getElementById("imageContainer")
 
