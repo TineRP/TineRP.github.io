@@ -37,7 +37,9 @@ img {
 }
 
 #imageContainer{
-    display: flex;
+    display: grid; /* Change display property to grid */
+    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    grid-gap: 0; /* Add gap between images */
     justify-content: center;
     align-items: center;
     width: 100%;
