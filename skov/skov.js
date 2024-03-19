@@ -5,20 +5,21 @@ const buttons = document.querySelectorAll('#buttons-container button');
 const userSelections = {skov: "tom", when: "tom", farve: "tom"};
 
 
+const storedData = localStorage.getItem('information')
+localStorage.setItem('information', JSON.stringify(JSON.parse(storedData)))
+
+
 buttons.forEach(button => {
     button.addEventListener('click', function(e) {
         const selectedOption = e.target.textContent;
         userSelections["skov"] = selectedOption;
-        console.log("SKOVSKOV")
-        console.log(userSelections)
-
+        
+        
+        localStorage.setItem('answers', JSON.stringify(userSelections))
         window.location.href = '../when/when.html'
     });
 });
 
-const storedData = localStorage.getItem('information')
-localStorage.setItem('information', JSON.stringify(JSON.parse(storedData)))
-localStorage.setItem('answers', JSON.stringify(userSelections))
 
 
 

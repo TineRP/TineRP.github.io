@@ -11,7 +11,8 @@ const information = JSON.parse(storedData)
 
 const container = document.getElementById('buttons-container')
 
-console.log(information)
+
+const userSelections = JSON.parse(localStorage.getItem('answers'))
 
 //for (let i = 0; i < Object.keys(information).length; i++) {
 //    const button = document.createElement("button");
@@ -49,7 +50,13 @@ container.append(button);
 const buttons = document.querySelectorAll('#buttons-container button');
 
 buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        //window.location.href = '../when/when.html'
+    button.addEventListener('click', function(e) {
+        const selectedOption = e.target.textContent;
+        userSelections["farve"] = selectedOption;
+        console.log(userSelections)
+
+        localStorage.setItem('answers', JSON.stringify(userSelections))
+
+        window.location.href = '../billedTjek1/billedTjek1.html'
     });
 });
