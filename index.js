@@ -252,15 +252,9 @@ function showResults(imgElement, classes) {
   eftertjekButton.addEventListener('click', function() {
     
     // Filter information based on classes
-    console.log("classes")
-    console.log(classes)
+   
     
     const filteredInformation = filterInformationByClasses(information, classes);
-    
-    console.log("filteredInformation")
-    console.log(filteredInformation)
-    
-
     
 
     //Save classes and relevant information in local storage
@@ -268,7 +262,7 @@ function showResults(imgElement, classes) {
     
 
     // Open new page
-    window.location.href = 'skov/tjek.html'
+    window.location.href = 'skov/skov.html'
 });
 
   predictionsElement.appendChild(document.createElement('br'));
