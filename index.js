@@ -53,7 +53,7 @@ const MOBILENET_MODEL_PATH = './mobilenet/model.json';
     //'https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json';
 
 const IMAGE_SIZE = 224;
-const TOPK_PREDICTIONS = 2;
+const TOPK_PREDICTIONS = 3;
 
 let mobilenet;
 const mobilenetDemo = async () => {
@@ -107,7 +107,7 @@ async function predict(imgElement) {
   //status(`Done in ${Math.floor(totalTime1)} ms ` +
     //  `(not including preprocessing: ${Math.floor(totalTime2)} ms)`);
 
-
+  
 
   // Show the classes in the DOM.
   showResults(imgElement, classes);
@@ -151,9 +151,9 @@ export async function getTopKClasses(logits, topK) {
 //
 
 // Mapping whether the mushroom is edible, non-edible or poisonous
-const edible = {}
-edible["Boletus_edulis"] = ["Spiselig","skov","tid","Brun"]
-edible["Tylopilus_felleus"] = ["Uspiselig","skov","tid","Gul"]
+//const edible = {}
+//edible["Boletus_edulis"] = ["Spiselig","skov","tid","Brun"]
+//edible["Tylopilus_felleus"] = ["Uspiselig","skov","tid","Gul"]
 
 // spiselighed, sted, tid, farve på hætte
 const information = {}
@@ -164,7 +164,7 @@ information["Satans Rørhat"] = ["Giftig","løvskov","jul,aug,sep","Hvid"]
 information["Almindelig Kantarel"] = ["Spiselig","løvskov,nåleskov","jun,jul,aug,sep,okt,nov","Gul"]
 information["Almindelig Orangekantarel"] = ["Uspiselig","nåleskov","sep,okt,nov","Orange"]
 information["Bleg Kantarel"] = ["Spiselig","løvskov","jun,jul,aug,sep,okt", "Gul"]
-information["Almindelig Østershat"] = ["Spiselig","løvskov,nåleskov","jan,feb,mar,apr,maj,jun,jul,aug,sep,okt,nov,dec","gråbrun"]
+information["Almindelig Østershat"] = ["Spiselig","løvskov,nåleskov","jan,feb,mar,apr,maj,jun,jul,aug,sep,okt,nov,dec","Gråbrun"]
 information["Gummihat"] = ["Upiselig","løvskov","okt,nov,dec,jan,feb,mar","Olivengrøn/gulbrun"]
 information["Sommer Østershat"] = ["Spiselig","løvskov","maj,jun,jul,aug,sep,okt","Brun"]
 information["Kridthat"] = ["Giftig","nåleskov","aug,sep,okt,nov","Kridhvid"]
@@ -180,10 +180,12 @@ information["Krystal-Støvbold"] = ["Spiselig", "løvskov,nåleskov", "aug,sep,o
 // Function to filter information based on classes
 function filterInformationByClasses(information, classes) {
   const filteredInformation = {};
-  for (const className in information) {
-      if (classes[className] != "undefined") {
-          filteredInformation[className] = information[className];
+  for (let i = 0; i < classes.length; i++) {
+    for (const className in information) {
+      if (classes[i].className == className){
+        filteredInformation[className] = information[className];
       }
+    }
   }
   return filteredInformation;
 }
@@ -219,7 +221,7 @@ function showResults(imgElement, classes) {
 
     const edibilityElement = document.createElement('div');
     edibilityElement.className = 'cell';
-    edibilityElement.innerText = icon[edible[classes[i].className]]
+    edibilityElement.innerText = icon[information[classes[i].className][0]]
     row.appendChild(edibilityElement);
 
     probsContainer.appendChild(row);
@@ -250,7 +252,13 @@ function showResults(imgElement, classes) {
   eftertjekButton.addEventListener('click', function() {
     
     // Filter information based on classes
-    const filteredInformation = filterInformationByClasses(edible, classes);
+    console.log("classes")
+    console.log(classes)
+    
+    const filteredInformation = filterInformationByClasses(information, classes);
+    
+    console.log("filteredInformation")
+    console.log(filteredInformation)
     
 
     
