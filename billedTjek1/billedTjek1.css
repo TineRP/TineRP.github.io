@@ -27,7 +27,7 @@ button {
     border-style: none;
     box-shadow: none;
     width: 100%; /* Set the width as needed */
-    height: 100%; /* Set the height as needed */
+    height: 10%; /* Set the height as needed */
     margin-bottom: 10px; /* Add margin between buttons */
     font-size: 40px;  }
 
