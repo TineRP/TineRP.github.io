@@ -1,4 +1,21 @@
 export const IMAGENET_CLASSES = {
-  0: 'Boletus_edulis',
-  1: 'Tylopilus_felleus'
+  0: 'Ager-Champignon',
+  1: 'Almindelig Kantarel',
+  2: 'Almindelig Orangekantarel',
+  3: 'Almindelig Pigsvamp',
+  4: 'Almindelig Østershat',
+  5: 'Bleg Kantarel',
+  6: 'Galderørhat',
+  7: 'Gummihat',
+  8: 'Karbol-Champignon',
+  9: 'Karl Johan',
+  10: 'Kridthat',
+  11: 'Krystal-Støvbold',
+  12: 'Mark-Champignon',
+  13: 'Navle-Pigsvamp',
+  14: 'Satans Rørhat',
+  15: 'Skællet Stilkporesvamp',
+  16: 'Småskællet Kødpigsvamp',
+  17: 'Sommer Rørhat',
+  18: 'Sommer Østershat'
 };
