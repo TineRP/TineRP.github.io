@@ -1,0 +1,72 @@
+.pred-container {
+    margin-bottom: 20px;
+
+  }
+
+  .pred-container > div {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+
+  #predictions {
+    text-align: center;  
+
+  }
+
+  .row {
+    display: table-row;
+    text-align: left;
+  }
+  .cell {
+    display: table-cell;
+    padding-right: 20px;
+  }
+
+
+  #file-container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(135, 188, 135);;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+    width: 100%; /* Take up the full width of its container */
+    box-sizing: border-box; /* Include padding and border in the width */
+    text-align: center; /* Center the content horizontally */
+}
+
+  #eftertjekButton {
+    background-color: rgb(135, 188, 135);
+    color: white;
+    border-color: rgb(135, 188, 135);
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: none;
+  }
+
+  
+  #files {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Take up the full width of its parent container */
+    height: 100%; /* Take up the full height of its parent container */
+    font-size: 100px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  
+  #div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }

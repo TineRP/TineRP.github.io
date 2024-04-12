@@ -24,7 +24,7 @@ downloaded_count = 0
 with open('multimedia_Hygrophoropsis_Aurantiaca.txt', 'r', encoding='utf-8') as file:
     next(file)  # Skip header
     for line in file:
-        if downloaded_count >= 3000:
+        if downloaded_count >= 700:
             break
         data = line.strip().split('\t')
         if data[1] == 'StillImage' and data[2] == 'image/jpeg':

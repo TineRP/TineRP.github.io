@@ -155,27 +155,29 @@ export async function getTopKClasses(logits, topK) {
 //edible["Boletus_edulis"] = ["Spiselig","skov","tid","Brun"]
 //edible["Tylopilus_felleus"] = ["Uspiselig","skov","tid","Gul"]
 
-// spiselighed, sted, tid, farve på hætte
+// spiselighed, sted, tid, farve på hat, underside af hat, stok, lugt, smag, andet
 const information = {}
-information["Karl Johan"] = ["Spiselig", "løvskov,nåleskov","jul,aug,sep,okt","Brun"]
-information["Galderørhat"] = ["Uspiselig", "løvskov,nåleskov","jun,jul,aug,sep,okt","Brun"]
-information["Sommer Rørhat"] = ["Spiselig","løvskov","jun,jul,aug,sep,okt,nov","Brun"]
-information["Satans Rørhat"] = ["Giftig","løvskov","jul,aug,sep","Hvid"]
-information["Almindelig Kantarel"] = ["Spiselig","løvskov,nåleskov","jun,jul,aug,sep,okt,nov","Gul"]
-information["Almindelig Orangekantarel"] = ["Uspiselig","nåleskov","sep,okt,nov","Orange"]
-information["Bleg Kantarel"] = ["Spiselig","løvskov","jun,jul,aug,sep,okt", "Gul"]
-information["Almindelig Østershat"] = ["Spiselig","løvskov,nåleskov","jan,feb,mar,apr,maj,jun,jul,aug,sep,okt,nov,dec","Gråbrun"]
-information["Gummihat"] = ["Upiselig","løvskov","okt,nov,dec,jan,feb,mar","Olivengrøn/gulbrun"]
-information["Sommer Østershat"] = ["Spiselig","løvskov","maj,jun,jul,aug,sep,okt","Brun"]
-information["Kridthat"] = ["Giftig","nåleskov","aug,sep,okt,nov","Kridhvid"]
-information["Almindelig Pigsvamp"] = ["Spiselig", "løvskov", "aug,sep,okt,nov","Cremefarvet"]
-information["Navle-Pigsvamp"] = ["Spiselig", "løvskov", "aug,sep,okt,nov,dec,jan","Gul"]
-information["Småskællet Kødpigsvamp"] = ["Uspiselig", "nåleskov", "jun,jul,aug,sep,okt","Mørkelilla skæl på brunlig baggrund"]
-information["Skællet Stilkporesvamp"] = ["Spiselig", "løvskov", "apr,maj,jun,jul,aug,sep","Brunlige skæl på hvidlig baggrund"]
-information["Mark-Champignon"] = ["Spiselig", "græs", "jul,aug,sep,okt","Hvid"]
-information["Ager-Champignon"] = ["Spiselig", "græs", "jun,jul,aug,sep,okt","Hvid"]
-information["Karbol-Champignon"] = ["Giftig", "løvskov,nåleskov", "jul,aug,sep,okt","Hvid"]
-information["Krystal-Støvbold"] = ["Spiselig", "løvskov,nåleskov", "aug,sep,okt","Hvid"]
+information["Karl Johan"] = ["Edible", "deciduous,coniferous","jul,aug,sep,oct","Brown","Pores","Covered with a light-colored netted pattern","Nutty", "No distinct taste","Hat is slimy"]
+information["Galderørhat"] = ["Inedible", "deciduous,coniferous","jun,jul,aug,sep,oct","Brown", "Pores","Covered with a dark green netted pattern","No distinct smell", "Bitter", ""]
+information["Sommer Rørhat"] = ["Edible","deciduous","jun,jul,aug,sep,oct,nov","Brown", "Pores","Covered with a light brown netted pattern", "No distinct smell", "No distinct taste", "Hat is dry"]
+information["Satans Rørhat"] = ["Poisonous","deciduous","jul,aug,sep","White","Pores","Red", "Unpleasant rotten smell", "No distinct taste", "When pressed, the mushroom turns greenish/bluish"]
+information["Almindelig Kantarel"] = ["Edible","deciduous,coniferous","jun,jul,aug,sep,oct,nov","Yellow","Ridges","Yellow", "Fruity apricot aroma", "Bitter", "The entire mushroom is the same yellowish color"]
+information["Almindelig Orangekantarel"] = ["Inedible","coniferous","sep,oct,nov","Orange","Gills","Orange","No distinct smell", "No distinct taste", "The cap feels like velvet"]
+information["Bleg Kantarel"] = ["Edible","deciduous","jun,jul,aug,sep,oct", "Pale yellow","Gills","Light","Fruity apricot aroma", "Bitter", ""]
+information["Almindelig Østershat"] = ["Edible","deciduous,coniferous","jan,feb,mar,apr,maj,jun,jul,aug,sep,oct,nov,dec","Gray or grayish brown", "Gills", "The gills continue down on the stem","Slight anise smell", "No distinct taste", "Grows on trees"]
+information["Gummihat"] = ["Inedible","deciduous","oct,nov,dec,jan,feb,mar","Olive green or yellowish brown","Gills","Yellowish","No distinct smell", "Bitter", "Grows on trees"]
+information["Sommer Østershat"] = ["Edible","deciduous","maj,jun,jul,aug,sep,oct","Brown","Gills","Creme","No distinct smell", "No distinct taste", "Grows on trees"]
+information["Kridthat"] = ["Poisonous","coniferous","aug,sep,oct,nov","Chalk white","Gills","Chalk white","No distinct smell", "No distinct taste", "Grows on trees"]
+information["Almindelig Pigsvamp"] = ["Edible", "deciduous", "aug,sep,oct,nov","Creme","Teeth","Creme", "No distinct smell", "Bitter", ""]
+information["Navle-Pigsvamp"] = ["Edible", "deciduous", "aug,sep,oct,nov,dec,jan","Orangish yellow to abricot orange", "Teeth","Light", "No distinct smell", "Bitter", "The cap has a belly button-like center"]
+information["Småskællet Kødpigsvamp"] = ["Inedible", "coniferous", "jun,jul,aug,sep,oct","Dark purple scales with a brownish background", "Teeth","Pale", "No distinct smell", "Bitter", ""]
+information["Skællet Stilkporesvamp"] = ["Edible", "deciduous", "apr,maj,jun,jul,aug,sep","Brownish scales with a whitish background","Dark", "Slightly of watermelon", "No distinct taste", ""]
+information["Mark-Champignon"] = ["Edible", "grass", "jul,aug,sep,oct","White", "Pores", "White with a thin ring","No distinct smell", "Tastes like a supermarket-mushroom", ""]
+information["Ager-Champignon"] = ["Edible", "grass", "jun,jul,aug,sep,oct","White","Gills", "White with a thin ring", "Anise","Tastes like a supermarket-mushroom", "When pressed, the mushroom turns yellow"]
+information["Karbol-Champignon"] = ["Poisonous", "deciduous,coniferous", "jul,aug,sep,oct","White","Gills", "White but yellow at the base of the stem","Chemical smell", "Chemical taste", "When pressed, the mushroom turns yellow"]
+information["Krystal-Støvbold"] = ["Edible", "deciduous,coniferous", "aug,sep,oct","White and covered with spikes","The cap is shaped like a ball, which means the underside is the same as the cap","White","No distinct smell","No distinct taste", "Only edible if the meat is white"]
+//information["Amanita virosa"] = ["Poisonous", "deciduous,coniferous", "jul,aug,sep,oct","White", "Gills", "White with a cup-like structure at the base of the stem", "Sickening smell", ""]
+//information["Amanita phalloides"] = ["Poisonous", "deciduous", "jul,aug,sep,oct,nov","Grayish or olivegreenish","Gills","White with a cup-like structure at the base of the stem", "Sickening smell", ""]
 
 // Function to filter information based on classes
 function filterInformationByClasses(information, classes) {
@@ -192,9 +194,9 @@ function filterInformationByClasses(information, classes) {
 
 
 const icon = {}
-icon["Spiselig"] = "😀"
-icon["Uspiselig"] = "😒"
-icon["Giftig"] = "☠️"
+icon["Edible"] = "😀"
+icon["Inedible"] = "😒"
+icon["Poisonous"] = "☠️"
 
 function showResults(imgElement, classes) {
   const predictionContainer = document.createElement('div');
@@ -228,7 +230,7 @@ function showResults(imgElement, classes) {
   }
 
   const iconTranslation = document.createElement('div');
-  iconTranslation.innerText = "Spiselig = 😀 Uspiselig = 😒 Giftig = ☠️";
+  iconTranslation.innerText = "Edible = 😀 Inedible = 😒 Poisonous = ☠️";
   iconTranslation.style.fontSize = "11px";
   iconTranslation.style.textAlign = "left";
 
@@ -247,7 +249,7 @@ function showResults(imgElement, classes) {
 
   const eftertjekButton = document.createElement('button');
   eftertjekButton.id = "eftertjekButton";
-  eftertjekButton.innerText = "Eftertjek model";
+  eftertjekButton.innerText = "Confirm it";
   eftertjekButton.style.width = IMAGE_SIZE + "px";
   eftertjekButton.addEventListener('click', function() {
     
@@ -262,7 +264,7 @@ function showResults(imgElement, classes) {
     
 
     // Open new page
-    window.location.href = 'skov/skov.html'
+    window.location.href = 'check1-environment/environment.html'
 });
 
   predictionsElement.appendChild(document.createElement('br'));
