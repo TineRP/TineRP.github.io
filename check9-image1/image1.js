@@ -1,12 +1,12 @@
 const buttons = document.querySelectorAll('#buttons-container button');
 const information = JSON.parse(localStorage.getItem('information'))
 const answers = JSON.parse(localStorage.getItem('answers'))
+const otherAnswers = JSON.parse(localStorage.getItem('userAnswers'))
 
 function matches(information, answers){
     let mostMatches = 0
     let mostLikely = ""
     const matchCounts = {};
-
 
     for (let i = 0 ; i < Object.keys(information).length; i++){
         let matchCount = 0
@@ -27,6 +27,34 @@ function matches(information, answers){
         // Check if color of cap matches
         if (answers["cap"] == values[3]){
             matchCount += 1
+        }
+
+        // Check underside
+        if (answers["underside"] == values[4]){
+            matchCount += 1
+        }
+
+        // Check stem
+        if (answers["stem"] == values[5]){
+            matchCount += 1
+        }
+
+        // Check smell
+        if (answers["smell"] == values[6]){
+            matchCount += 1
+        }
+
+        // Check taste
+        if (answers["taste"] == values[7]){
+            matchCount += 1
+        }
+
+        // check Other
+        for (let question in otherAnswers) {
+            const answer = otherAnswers[question];
+            if (answer === values[8]) {
+                matchCount += 1
+            }
         }
 
         // Store the match count for the current class

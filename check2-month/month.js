@@ -11,4 +11,13 @@ monthDropdown.addEventListener('change', function() {
 const storedData = localStorage.getItem('information')
 localStorage.setItem('information', JSON.stringify(JSON.parse(storedData)))
 
-console.log(storedData)
+
+document.addEventListener('DOMContentLoaded', function () {
+    const burgerIcon = document.querySelector('.burger-icon');
+    const menuItems = document.querySelector('.menu-items');
+  
+    burgerIcon.addEventListener('click', function () {
+      menuItems.classList.toggle('show');
+    });
+  });
+  

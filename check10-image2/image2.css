@@ -50,3 +50,20 @@ p {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
 }
+
+#myBar {
+    width: 95%;
+    height: 100%;
+    background-color: rgb(135, 188, 135);
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 40px;
+
+}
+
+#myProgress {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(233, 245, 233);
+}

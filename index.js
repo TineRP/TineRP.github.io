@@ -307,4 +307,17 @@ const predictionsElement = document.getElementById('predictions');
 //dropfieldElement.addEventListener("dragover", allowDrop, false);
 //dropfieldElement.addEventListener("drop", drop, false);
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const burgerIcon = document.querySelector('.burger-icon');
+  const menuItems = document.querySelector('.menu-items');
+
+  burgerIcon.addEventListener('click', function () {
+    menuItems.classList.toggle('show');
+  });
+});
+
+
 mobilenetDemo();
+
+

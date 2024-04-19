@@ -31,6 +31,6 @@ buttons.forEach(button => {
         userSelections["taste"] = selectedOption;
         localStorage.setItem('answers', JSON.stringify(userSelections))
 
-        window.location.href = '../check9-image1/image1.html'
+        window.location.href = '../check8-other/other.html'
     });
 });

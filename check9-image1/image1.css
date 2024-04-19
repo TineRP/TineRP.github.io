@@ -50,3 +50,31 @@ p {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
 }
+
+#questions{
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100%; /* Make sure the container takes up the full viewport height */
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    
+}
+
+#myBar {
+    width: 90%;
+    height: 100%;
+    background-color: rgb(135, 188, 135);
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 40px;
+
+}
+
+#myProgress {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(233, 245, 233);
+}
