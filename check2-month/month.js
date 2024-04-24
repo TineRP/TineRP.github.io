@@ -1,6 +1,8 @@
 const userSelections = JSON.parse(localStorage.getItem('answers'))
 const monthDropdown = document.getElementById('month-dropdown');
 
+const modelPrediction = JSON.parse(localStorage.getItem('modelPrediction'))
+
 monthDropdown.addEventListener('change', function() {
     const selectedMonth = this.value;
     userSelections["month"] = selectedMonth;
@@ -11,6 +13,7 @@ monthDropdown.addEventListener('change', function() {
 const storedData = localStorage.getItem('information')
 localStorage.setItem('information', JSON.stringify(JSON.parse(storedData)))
 
+localStorage.setItem('modelPrediction', JSON.stringify(modelPrediction));
 
 document.addEventListener('DOMContentLoaded', function () {
     const burgerIcon = document.querySelector('.burger-icon');

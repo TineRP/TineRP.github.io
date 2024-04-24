@@ -71,6 +71,8 @@ const mobilenetDemo = async () => {
   document.getElementById('file-container').style.display = '';
 };
 
+
+
 /**
  * Given an image element, makes a prediction through mobilenet returning the
  * probabilities of the top K classes.
@@ -107,7 +109,10 @@ async function predict(imgElement) {
   //status(`Done in ${Math.floor(totalTime1)} ms ` +
     //  `(not including preprocessing: ${Math.floor(totalTime2)} ms)`);
 
-  
+  //HERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHER
+  localStorage.setItem('modelPrediction', JSON.stringify(classes[0]));
+  console.log(classes[0])
+  //HERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHER
 
   // Show the classes in the DOM.
   showResults(imgElement, classes);
@@ -143,6 +148,9 @@ export async function getTopKClasses(logits, topK) {
       probability: topkValues[i],
     })
   }
+
+  
+
   return topClassesAndProbs;
 }
 
@@ -305,7 +313,6 @@ const predictionsElement = document.getElementById('predictions');
 //dropfieldElement.addEventListener("dragover", allowDrop, false);
 //dropfieldElement.addEventListener("drop", drop, false);
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const burgerIcon = document.querySelector('.burger-icon');
   const menuItems = document.querySelector('.menu-items');
@@ -313,6 +320,9 @@ document.addEventListener('DOMContentLoaded', function () {
   burgerIcon.addEventListener('click', function () {
     menuItems.classList.toggle('show');
   });
+
+  
+
 });
 
 

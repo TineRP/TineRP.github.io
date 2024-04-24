@@ -59,6 +59,7 @@ function matches(information, answers){
 
         // Store the match count for the current class
         matchCounts[className] = matchCount;
+        
 
         // Check if it has more matches than previous species
         if (matchCount > mostMatches){

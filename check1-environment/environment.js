@@ -1,3 +1,5 @@
+const modelPrediction = JSON.parse(localStorage.getItem('modelPrediction'))
+
 const buttons = document.querySelectorAll('#buttons-container button');
 
 // Initialize an object to store user selections
@@ -15,6 +17,11 @@ buttons.forEach(button => {
         
         
         localStorage.setItem('answers', JSON.stringify(userSelections))
+
+        localStorage.setItem('modelPrediction', JSON.stringify(modelPrediction));
+        
+
+
         window.location.href = '../check2-month/month.html'
     });
 });

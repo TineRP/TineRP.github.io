@@ -3,6 +3,8 @@ const information = JSON.parse(storedData)
 const container = document.getElementById('buttons-container')
 const userSelections = JSON.parse(localStorage.getItem('answers'))
 
+const modelPrediction = JSON.parse(localStorage.getItem('modelPrediction'))
+
 for (let i = 0; i < Object.keys(information).length; i++) {
     const className = Object.keys(information)[i];
     const buttonText = information[className][5];
@@ -34,6 +36,8 @@ buttons.forEach(button => {
         const selectedOption = e.target.textContent;
         userSelections["stem"] = selectedOption;
         localStorage.setItem('answers', JSON.stringify(userSelections))
+
+        localStorage.setItem('modelPrediction', JSON.stringify(modelPrediction));
 
         window.location.href = '../check6-smell/smell.html'
     });
