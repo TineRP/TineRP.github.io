@@ -1,19 +1,19 @@
-Ager-Champignon
-Almindelig Kantarel
-Almindelig Orangekantarel
-Almindelig Pigsvamp
-Almindelig Østershat
-Bleg Kantarel
-Galderørhat
-Gummihat
-Karbol-Champignon
-Karl Johan
-Kridthat
-Krystal-Støvbold
-Mark-Champignon
-Navle-Pigsvamp
-Satans Rørhat
-Skællet Stilkporesvamp
-Småskællet Kødpigsvamp
-Sommer Rørhat
-Sommer Østershat
+Agaricus arvensis
+Cantharellus cibarius
+Hygrophoropsis aurantiaca
+Hydnum repandum
+Pleurotus ostreatus
+Cantharellus pallens
+Tylopilus felleus
+Sarcomyxa serotina
+Agaricus xanthodermus
+Boletus edulis
+Pleurocybella porrigens
+Lycoperdon perlatum
+Agaricus campestris
+Hydnum umbilicatum
+Rubroboletus satanas
+Polyporus squamosus
+Sarcodon squamosus
+Boletus reticulatus
+Pleurotus pulmonarius
