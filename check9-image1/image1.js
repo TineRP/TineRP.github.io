@@ -15,7 +15,7 @@ function matches(information, answers){
         const values = information[className]
 
         // Check if environment matches
-        if(values[1].includes(answers["environment"].toLowerCase().trim())){ 
+        if(answers["environment"].toLowerCase().trim().includes(values[1])){ 
             matchCount += 1
         }
 
@@ -60,7 +60,7 @@ function matches(information, answers){
         // Store the match count for the current class
         matchCounts[className] = matchCount;
         
-
+        
         // Check if it has more matches than previous species
         if (matchCount > mostMatches){
             mostMatches = matchCount
@@ -71,12 +71,19 @@ function matches(information, answers){
     const sortedMatchCounts = Object.fromEntries(
     Object.entries(matchCounts).sort(([,a],[,b]) => b - a)
     );
-
-    return { mostLikely, matchCounts: sortedMatchCounts };
+    
+    return { mostLikely, matchCounts, sortedMatchCounts };
     }
 
 
-const { mostLikely, matchCounts } = matches(information, answers);
+const { mostLikely, matchCounts, sortedMatchCounts } = matches(information, answers);
+
+
+const [className, matchCount2] = Object.entries(sortedMatchCounts)[1]
+let score2 = matchCount2/(information[className].length - 1)
+console.log(sortedMatchCounts)
+console.log(matchCount2)
+console.log(score2)
 
 // Show 4 images for most likely species
 for (let i = 1; i <= 4 ; i ++){
@@ -88,6 +95,7 @@ for (let i = 1; i <= 4 ; i ++){
     const imageContainer = document.getElementById("imageContainer")
     imageContainer.appendChild(imgElement)
 }
+
 
 
 const yesButton = document.getElementById("yes-button");
@@ -105,7 +113,15 @@ function nextPage(){
     const thirdMostLikely = matchCountsArray[2][0]
     localStorage.setItem('secondMostLikely', JSON.stringify(secondMostLikely))
     localStorage.setItem('thirdMostLikely', JSON.stringify(thirdMostLikely))
-    window.location.href = '../check10-image2/image2.html'
+    if (score2 > 0.6){
+        window.location.href = '../check10-image2/image2.html'
+    }
+    else{
+        window.location.href = '../final-no-prediction/no-prediction.html';
+    }
 }
+
 noButton.addEventListener('click', nextPage);
 notSureButton.addEventListener('click', nextPage);
+
+localStorage.setItem('userAnswers', JSON.stringify(otherAnswers));

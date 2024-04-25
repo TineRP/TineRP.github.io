@@ -11,7 +11,7 @@ let firstMushroom = Object.keys(information)[0]
 let secondMushroom = Object.keys(information)[1]
 let thirdMushroom = Object.keys(information)[2]
 
-if (firstMushroom === 'Karl Johan' || secondMushroom === 'Karl Johan' || thirdMushroom === 'Karl Johan') {
+if (firstMushroom === 'Boletus edulis' || secondMushroom === 'Boletus edulis' || thirdMushroom === 'Boletus edulis') {
     const div = document.querySelector('.slimy');
     div.style.display = "block";
     div.style.textAlign = "center";
@@ -83,12 +83,17 @@ let userAnswers = {};
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    button.style.backgroundColor = 'rgb(106, 148, 106)'; 
-    
     const questionContainer = button.closest('.tfjs-example-container > div');
     const question = questionContainer.querySelector('p').textContent.trim();
-    let answer = button.textContent.trim();
-    
+
+     const buttonsInGroup = questionContainer.querySelectorAll('button');
+     buttonsInGroup.forEach(btn => {
+         btn.style.backgroundColor = ''; 
+     });
+
+    button.style.backgroundColor = 'rgb(106, 148, 106)'; 
+
+    let answer = button.textContent.trim();    
     if (questionContainer.classList.contains('slimy')) {
       if (answer === 'Yes') {
         answer = 'Hat is slimy';
@@ -128,14 +133,15 @@ buttons.forEach(button => {
 });
 
 
+const values1 = information[modelPrediction[0]["className"]]
+const values2 = information[modelPrediction[1]["className"]]
+const values3 = information[modelPrediction[2]["className"]]
 
-const values = information[modelPrediction["className"]]
-console.log(values)
 
-function matches(information, answers,userAnswers){
+function matches(information, answers,userAnswers, values){
     for (let i = 0 ; i < Object.keys(information).length; i++){
         let matchCount = 0
-
+    
         // Check if environment matches
         if(answers["environment"].toLowerCase().trim().includes(values[1])){ 
             console.log("ENVIRONMENT")
@@ -184,20 +190,24 @@ function matches(information, answers,userAnswers){
     }
 }
 
-/*BEREGNER DEN SCORE INDEN DEN KØRER SIDEN???*/
-
 
 
 const continueButton = document.querySelector('#continue-button');
 continueButton.addEventListener('click', function(e) {
-  let noOfMatches = matches(values, userSelections, userAnswers)
-  let score = noOfMatches / (values.length - 1)
+  let noOfMatches1 = matches(information, userSelections, userAnswers, values1)
+  let noOfMatches2 = matches(information, userSelections, userAnswers, values2)
+  let noOfMatches3 = matches(information, userSelections, userAnswers, values3)
+  let score1 = noOfMatches1 / (values1.length - 1)
+  let score2 = noOfMatches2 / (values2.length - 1)
+  let score3 = noOfMatches3 / (values3.length - 1)
+
+  
+ 
 
   localStorage.setItem('userAnswers', JSON.stringify(userAnswers));
+  
 
-
-  console.log('score', score)
-  if (score >= 0.7){
+  if ((score1 >= 0.8) || (score2 >= 0.8) || (score3 >= 0.8)){
     window.location.href = '../check9-image1/image1.html';
   }
   else{

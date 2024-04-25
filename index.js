@@ -110,7 +110,7 @@ async function predict(imgElement) {
     //  `(not including preprocessing: ${Math.floor(totalTime2)} ms)`);
 
   //HERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHER
-  localStorage.setItem('modelPrediction', JSON.stringify(classes[0]));
+  localStorage.setItem('modelPrediction', JSON.stringify(classes));
   console.log(classes[0])
   //HERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHER
 
