@@ -98,7 +98,7 @@ let text = ''
 if (edibility == 'Edible'){
     text = 'The mushroom is ' + edibility.toLowerCase() + '. It is therefore safe to pick 👌'
 } else if (edibility == 'Inedible'){
-    text = 'The mushroom is ' + edibility.toLowerCase() + '. While consuming the mushroom is not dangerous, I cannot recommend picking it'
+    text = 'The mushroom is ' + edibility.toLowerCase() + '. While consuming the mushroom is not dangerous, it is not recommend picking, as it either has a bitter taste or consuming it in large doses can be poisonous'
 } else if (edibility == 'Poisonous'){
     text = 'The mushroom is ' + edibility.toLowerCase() + '. You should not pick or consume the mushroom'
 }

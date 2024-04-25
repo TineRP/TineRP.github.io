@@ -184,29 +184,19 @@ function matches(information, answers,userAnswers){
     }
 }
 
-let noOfMatches = matches(values, userSelections, userAnswers)
-console.log("INFORMATION")
-console.log(values)
-console.log("ANSWERS")
-console.log(userSelections)
-
-
-console.log("NoOfMatches")
-console.log(noOfMatches)
-console.log(values.length)
-
-let score = noOfMatches / values.length
-console.log("SCORE")
-console.log(score)
-
 /*BEREGNER DEN SCORE INDEN DEN KØRER SIDEN???*/
 
 
 
 const continueButton = document.querySelector('#continue-button');
 continueButton.addEventListener('click', function(e) {
-    localStorage.setItem('userAnswers', JSON.stringify(userAnswers));
+  let noOfMatches = matches(values, userSelections, userAnswers)
+  let score = noOfMatches / (values.length - 1)
 
+  localStorage.setItem('userAnswers', JSON.stringify(userAnswers));
+
+
+  console.log('score', score)
   if (score >= 0.7){
     window.location.href = '../check9-image1/image1.html';
   }
