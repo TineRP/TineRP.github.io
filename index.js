@@ -185,6 +185,7 @@ information["Horse mushroom"] = ["Edible", "grass", "jun,jul,aug,sep,oct","White
 information["Yellow stainer"] = ["Poisonous", "deciduous,coniferous", "jul,aug,sep,oct","White","Gills", "White but yellow at the base of the stem","Chemical smell", "Chemical taste", "When pressed, the mushroom turns yellow"]
 information["Common puffball"] = ["Edible", "deciduous,coniferous", "aug,sep,oct","White and covered with spikes","The cap is shaped like a ball, which means the underside is the same as the cap","White","No distinct smell","Mild", "Only edible if the meat is white"]
 
+localStorage.setItem("nonFilteredInformation", JSON.stringify(information))
 // Function to filter information based on classes
 function filterInformationByClasses(information, classes) {
   const filteredInformation = {};

@@ -24,3 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
+
+const submenuItems = document.querySelectorAll('.submenu a');
+
+submenuItems.forEach(submenuItem => {
+  submenuItem.addEventListener('click', function() {
+    localStorage.setItem("clickedMushroom", JSON.stringify(submenuItem.textContent));
+  });
+});
+
