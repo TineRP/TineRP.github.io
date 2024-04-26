@@ -108,3 +108,13 @@ const paragraph1 = document.createElement('p');
 paragraph1.textContent = text;
 container.appendChild(paragraph1)
 
+
+const paragraph2 = document.createElement('p');
+paragraph2.textContent = 'Read more about '
+const link = document.createElement('a');
+link.textContent = prediction;
+link.href = '../information/information.html'
+paragraph2.appendChild(link);
+container.appendChild(paragraph2);
+
+localStorage.setItem('clickedMushroom', JSON.stringify(prediction))

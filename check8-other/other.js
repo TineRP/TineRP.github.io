@@ -11,38 +11,38 @@ let firstMushroom = Object.keys(information)[0]
 let secondMushroom = Object.keys(information)[1]
 let thirdMushroom = Object.keys(information)[2]
 
-if (firstMushroom === 'Boletus edulis' || secondMushroom === 'Boletus edulis' || thirdMushroom === 'Boletus edulis') {
+if (firstMushroom === 'Penny bun' || secondMushroom === 'Penny bun' || thirdMushroom === 'Penny bun') {
     const div = document.querySelector('.slimy');
     div.style.display = "block";
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'Boletus reticulatus' || secondMushroom === 'Boletus reticulatus' || thirdMushroom === 'Boletus reticulatus') {
+if (firstMushroom === 'Summer bolete' || secondMushroom === 'Summer bolete' || thirdMushroom === 'Summer bolete') {
     const div = document.querySelector('.dry');
     div.style.display = "block";
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'Rubroboletus satanas' || secondMushroom === 'Rubroboletus satanas' || thirdMushroom === 'Rubroboletus satanas') {
+if (firstMushroom === 'Devil\'s bolete' || secondMushroom === 'Devil\'s bolete' || thirdMushroom === 'Devil\'s bolete') {
     const div = document.querySelector('.greenish');
     div.style.display = "block";
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'Cantharellus cibarius' || secondMushroom === 'Cantharellus cibarius' || thirdMushroom === 'Cantharellus cibarius') {
+if (firstMushroom === 'Chantarelle' || secondMushroom === 'Chantarelle' || thirdMushroom === 'Chantarelle') {
     const div = document.querySelector('.samecolor');
     div.style.display = "block";
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'Hygrophoropsis aurantiaca' || secondMushroom === 'Hygrophoropsis aurantiaca' || thirdMushroom === 'Hygrophoropsis aurantiaca') {
+if (firstMushroom === 'False chantarelle' || secondMushroom === 'False chantarelle' || thirdMushroom === 'False chantarelle') {
     const div = document.querySelector('.velvet');
     div.style.display = "block";
     div.style.textAlign = "center";
 }
 
 
-if (firstMushroom === 'Pleurotus ostreatus' || secondMushroom === 'Pleurotus ostreatus' || thirdMushroom === 'Pleurotus ostreatus') {
+if (firstMushroom === 'Oyster mushroom' || secondMushroom === 'Oyster mushroom' || thirdMushroom === 'Oyster mushroom') {
     const div = document.querySelector('.tree');
     div.style.display = "block";
     div.style.textAlign = "center";
@@ -54,25 +54,25 @@ if (firstMushroom === 'Sarcomyxa serotina' || secondMushroom === 'Sarcomyxa sero
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'Pleurotus pulmonarius' || secondMushroom === 'Pleurotus pulmonarius' || thirdMushroom === 'Pleurotus pulmonarius') {
+if (firstMushroom === 'Pale oyster' || secondMushroom === 'Pale oyster' || thirdMushroom === 'Pale oyster') {
     const div = document.querySelector('.tree');
     div.style.display = "block";
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'Pleurocybella porrigens' || secondMushroom === 'Pleurocybella porrigens' || thirdMushroom === 'Pleurocybella porrigens') {
+if (firstMushroom === 'Angel\'s wings' || secondMushroom === 'Angel\'s wings' || thirdMushroom === 'Angel\'s wings') {
     const div = document.querySelector('.tree');
     div.style.display = "block";
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'Hydnum umbilicatum' || secondMushroom === 'Hydnum umbilicatum' || thirdMushroom === 'Hydnum umbilicatum') {
+if (firstMushroom === 'Depressed hedgehog' || secondMushroom === 'Depressed hedgehog' || thirdMushroom === 'Depressed hedgehog') {
     const div = document.querySelector('.bellybutton');
     div.style.display = "block";
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'Agaricus arvensis' || secondMushroom === 'Agaricus arvensis' || thirdMushroom === 'Agaricus arvensis') {
+if (firstMushroom === 'Horse mushroom' || secondMushroom === 'Horse mushroom' || thirdMushroom === 'Horse mushroom') {
     const div = document.querySelector('.yellow');
     div.style.display = "block";
     div.style.textAlign = "center";

@@ -165,25 +165,25 @@ export async function getTopKClasses(logits, topK) {
 
 // spiselighed, sted, tid, farve på hat, underside af hat, stok, lugt, smag, andet
 const information = {}
-information["Boletus edulis"] = ["Edible", "deciduous,coniferous","jul,aug,sep,oct","Brown","Pores","Covered with a light-colored netted pattern","Nutty", "Mild","Hat is slimy"]
-information["Tylopilus felleus"] = ["Inedible", "deciduous,coniferous","jun,jul,aug,sep,oct","Brown", "Pores","Covered with a dark green netted pattern","No distinct smell", "Bitter", ""]
-information["Boletus reticulatus"] = ["Edible","deciduous","jun,jul,aug,sep,oct,nov","Brown", "Pores","Covered with a light brown netted pattern", "Earthy", "Mild", "Hat is dry"]
-information["Rubroboletus satanas"] = ["Poisonous","deciduous","jul,aug,sep","White","Pores","Red", "Unpleasant rotten smell", "No distinct taste", "When pressed, the mushroom turns greenish/bluish"]
-information["Cantharellus cibarius"] = ["Edible","deciduous,coniferous","jun,jul,aug,sep,oct,nov","Yellow","Ridges","Yellow", "Fruity apricot aroma", "Bitter", "The entire mushroom is the same yellowish color"]
-information["Hygrophoropsis aurantiaca"] = ["Inedible","coniferous","sep,oct,nov","Orange","Gills","Orange","No distinct smell", "No distinct taste", "The cap feels like velvet"]
+information["Penny bun"] = ["Edible", "deciduous,coniferous","jul,aug,sep,oct","Brown","Pores","Covered with a light-colored netted pattern","Nutty", "Mild","Hat is slimy"]
+information["Bitter bolete"] = ["Inedible", "deciduous,coniferous","jun,jul,aug,sep,oct","Brown", "Pores","Covered with a dark green netted pattern","No distinct smell", "Bitter", ""]
+information["Summer bolete"] = ["Edible","deciduous","jun,jul,aug,sep,oct,nov","Brown", "Pores","Covered with a light brown netted pattern", "Earthy", "Mild", "Hat is dry"]
+information["Devil's bolete"] = ["Poisonous","deciduous","jul,aug,sep","White","Pores","Red", "Unpleasant rotten smell", "No distinct taste", "When pressed, the mushroom turns greenish/bluish"]
+information["Chantarelle"] = ["Edible","deciduous,coniferous","jun,jul,aug,sep,oct,nov","Yellow","Ridges","Yellow", "Fruity apricot aroma", "Bitter", "The entire mushroom is the same yellowish color"]
+information["False chantarelle"] = ["Inedible","coniferous","sep,oct,nov","Orange","Gills","Orange","No distinct smell", "No distinct taste", "The cap feels like velvet"]
 information["Cantharellus pallens"] = ["Edible","deciduous","jun,jul,aug,sep,oct", "Pale yellow","Gills","Light","Fruity apricot aroma", "Bitter", ""]
-information["Pleurotus ostreatus"] = ["Edible","deciduous,coniferous","jan,feb,mar,apr,maj,jun,jul,aug,sep,oct,nov,dec","Gray or grayish brown", "Gills", "The gills continue down on the stem","Slight anise smell", "Mild", "Grows on trees"]
+information["Oyster mushroom"] = ["Edible","deciduous,coniferous","jan,feb,mar,apr,maj,jun,jul,aug,sep,oct,nov,dec","Gray or grayish brown", "Gills", "The gills continue down on the stem","Slight anise smell", "Mild", "Grows on trees"]
 information["Sarcomyxa serotina"] = ["Inedible","deciduous","oct,nov,dec,jan,feb,mar","Olive green or yellowish brown","Gills","Yellowish","No distinct smell", "Bitter", "Grows on trees"]
-information["Pleurotus pulmonarius"] = ["Edible","deciduous","maj,jun,jul,aug,sep,oct","Brown","Gills","Creme","No distinct smell", "Mild", "Grows on trees"]
-information["Pleurocybella porrigens"] = ["Poisonous","coniferous","aug,sep,oct,nov","Chalk white","Gills","Chalk white","No distinct smell", "No distinct taste", "Grows on trees"]
-information["Hydnum repandum"] = ["Edible", "deciduous", "aug,sep,oct,nov","Creme","Teeth","Creme", "No distinct smell", "Bitter", ""]
-information["Hydnum umbilicatum"] = ["Edible", "deciduous", "aug,sep,oct,nov,dec,jan","Orangish yellow to abricot orange", "Teeth","Light", "No distinct smell", "Bitter", "The cap has a belly button-like center"]
+information["Pale oyster"] = ["Edible","deciduous","maj,jun,jul,aug,sep,oct","Brown","Gills","Creme","No distinct smell", "Mild", "Grows on trees"]
+information["Angel's wings"] = ["Poisonous","coniferous","aug,sep,oct,nov","Chalk white","Gills","Chalk white","No distinct smell", "No distinct taste", "Grows on trees"]
+information["Wood hedgehog"] = ["Edible", "deciduous", "aug,sep,oct,nov","Creme","Teeth","Creme", "No distinct smell", "Bitter", ""]
+information["Depressed hedgehog"] = ["Edible", "deciduous", "aug,sep,oct,nov,dec,jan","Orangish yellow to abricot orange", "Teeth","Light", "No distinct smell", "Bitter", "The cap has a belly button-like center"]
 information["Sarcodon squamosus"] = ["Inedible", "coniferous", "jun,jul,aug,sep,oct","Dark purple scales with a brownish background", "Teeth","Pale", "No distinct smell", "Bitter", ""]
-information["Polyporus squamosus"] = ["Edible", "deciduous", "apr,maj,jun,jul,aug,sep","Brownish scales with a whitish background","Dark", "Slightly of watermelon", "No distinct taste", ""]
-information["Agaricus campestris"] = ["Edible", "grass", "jul,aug,sep,oct","White", "Pores", "White with a thin ring","No distinct smell", "Tastes like a supermarket-mushroom", ""]
-information["Agaricus arvensis"] = ["Edible", "grass", "jun,jul,aug,sep,oct","White","Gills", "White with a thin ring", "Anise","Tastes like a supermarket-mushroom", "When pressed, the mushroom turns yellow"]
-information["Agaricus xanthodermus"] = ["Poisonous", "deciduous,coniferous", "jul,aug,sep,oct","White","Gills", "White but yellow at the base of the stem","Chemical smell", "Chemical taste", "When pressed, the mushroom turns yellow"]
-information["Lycoperdon perlatum"] = ["Edible", "deciduous,coniferous", "aug,sep,oct","White and covered with spikes","The cap is shaped like a ball, which means the underside is the same as the cap","White","No distinct smell","Mild", "Only edible if the meat is white"]
+information["Dryad's saddle"] = ["Edible", "deciduous", "apr,maj,jun,jul,aug,sep","Brownish scales with a whitish background","Dark", "Slightly of watermelon", "No distinct taste", ""]
+information["Field mushroom"] = ["Edible", "grass", "jul,aug,sep,oct","White", "Pores", "White with a thin ring","No distinct smell", "Tastes like a supermarket-mushroom", ""]
+information["Horse mushroom"] = ["Edible", "grass", "jun,jul,aug,sep,oct","White","Gills", "White with a thin ring", "Anise","Tastes like a supermarket-mushroom", "When pressed, the mushroom turns yellow"]
+information["Yellow stainer"] = ["Poisonous", "deciduous,coniferous", "jul,aug,sep,oct","White","Gills", "White but yellow at the base of the stem","Chemical smell", "Chemical taste", "When pressed, the mushroom turns yellow"]
+information["Common puffball"] = ["Edible", "deciduous,coniferous", "aug,sep,oct","White and covered with spikes","The cap is shaped like a ball, which means the underside is the same as the cap","White","No distinct smell","Mild", "Only edible if the meat is white"]
 
 // Function to filter information based on classes
 function filterInformationByClasses(information, classes) {
@@ -219,8 +219,21 @@ function showResults(imgElement, classes) {
 
     const classElement = document.createElement('div');
     classElement.className = 'cell';
-    classElement.innerText = classes[i].className;
+
+    // Create link to information 
+    const link = document.createElement('a');
+    link.textContent = classes[i].className;
+    link.href = '../information/information.html'
+
+    link.addEventListener('click', function(event) {
+      localStorage.setItem('clickedMushroom', JSON.stringify(classes[i].className))
+    });
+
+    classElement.appendChild(link);
     row.appendChild(classElement);
+
+    console.log(classes[i].className)
+    console.log(information[classes[i].className])
 
     const probsElement = document.createElement('div');
     probsElement.className = 'cell';
@@ -262,16 +275,17 @@ function showResults(imgElement, classes) {
     // Filter information based on classes
    
     
-    const filteredInformation = filterInformationByClasses(information, classes);
-    
-
-    //Save classes and relevant information in local storage
-    localStorage.setItem('information', JSON.stringify(filteredInformation))
-    
+  
 
     // Open new page
     window.location.href = 'check1-environment/environment.html'
 });
+
+  const filteredInformation = filterInformationByClasses(information, classes);
+      
+
+  //Save classes and relevant information in local storage
+  localStorage.setItem('information', JSON.stringify(filteredInformation))
 
   predictionsElement.appendChild(document.createElement('br'));
   predictionsElement.appendChild(eftertjekButton);
@@ -320,9 +334,6 @@ document.addEventListener('DOMContentLoaded', function () {
   burgerIcon.addEventListener('click', function () {
     menuItems.classList.toggle('show');
   });
-
-  
-
 });
 
 
