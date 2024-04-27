@@ -5,10 +5,6 @@ const prediction = JSON.parse(localStorage.getItem('prediction'))
 const clickedMushroom = JSON.parse(localStorage.getItem('clickedMushroom'))
 const nonFilteredInformation = JSON.parse(localStorage.getItem('nonFilteredInformation'))
 
-
-console.log("HEJ")
-console.log(clickedMushroom)
-console.log(nonFilteredInformation)
 const container = document.getElementById('question-container')
 
 const header = document.createElement('h1')

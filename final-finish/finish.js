@@ -5,13 +5,6 @@ const otherAnswers = JSON.parse(localStorage.getItem('userAnswers'))
 
 const prediction = JSON.parse(localStorage.getItem('prediction'))
 
-/*---------*/ 
-console.log(information[prediction])
-console.log(answers)
-console.log(otherAnswers)
-console.log(Object.keys(answers).length)
-/*--------------*/
-
 const container = document.getElementById('question-container')
 
 let path = "../images/" + prediction + "/" + prediction + 1 + ".jpg"
@@ -32,61 +25,47 @@ function matches(information, answers){
 
         // Check if environment matches
         if(answers["environment"].toLowerCase().trim().includes(values[1])){ 
-            console.log("ENVIRONMENT")
             matchCount += 1
         }
         // Check if month matches
         if(values[2].includes(answers["month"].toLowerCase().trim().substring(0,3))){
-            console.log("MONTH")
             matchCount += 1
         }
         // Check if color of cap matches
         if (answers["cap"] == values[3]){
-            console.log("CAP")
             matchCount += 1
         }
         // Check underside
         if (answers["underside"] == values[4]){
-            console.log("underside")
             matchCount += 1
         }
         // Check stem
         if (answers["stem"] == values[5]){
-            console.log("stem")
             matchCount += 1
         }
         // Check smell
         if (answers["smell"] == values[6]){
-            console.log("smell")
             matchCount += 1
         }
         // Check taste
         if (answers["taste"] == values[7]){
-            console.log("taste")
             matchCount += 1
         }
         // check Other
         for (let question in otherAnswers) {
             const answer = otherAnswers[question];
             if (answer === values[8]) {
-                console.log("other")
                 matchCount += 1
             }
         }
-        console.log(matchCount)
         return matchCount; 
     }
 }
 
 let noOfMatches = matches(values, answers)
-console.log("NoOfMatches")
-console.log(noOfMatches)
-console.log(values.length)
 
 let score = noOfMatches / values.length
-console.log("SCORE")
-console.log(score)
-/*------------*/ 
+
 const answer = 'Your mushroom is most likely a ' + prediction + '!'
 const paragraph = document.createElement('p');
 paragraph.textContent = answer;

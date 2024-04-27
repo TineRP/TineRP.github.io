@@ -83,13 +83,6 @@ const { mostLikely, matchCounts, sortedMatchCounts } = matches(information, answ
 
 const [className, matchCount3] = Object.entries(sortedMatchCounts)[2]
 let score3 = matchCount3/(information[className].length - 1)
-console.log(sortedMatchCounts)
-console.log(matchCount3)
-console.log(score3)
-
-
-
-
 
 
 // Show 4 images for most likely species

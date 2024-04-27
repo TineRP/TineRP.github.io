@@ -104,17 +104,12 @@ p {
   }
 
   .submenu {
-    display: none;
     position: absolute;
     top: 100%; /* Position it below the main menu item */
     left: 350px;
     background-color: #fff;
     border-radius: 5px;
     width: 100%;
-  }
-  
-  .menu-items:hover .submenu {
-    display: block; /* Show submenu on hover */
-  }
-  
+}
+
 

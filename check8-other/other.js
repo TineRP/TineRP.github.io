@@ -5,7 +5,6 @@ const userSelections = JSON.parse(localStorage.getItem('answers'))
 
 const modelPrediction = JSON.parse(localStorage.getItem('modelPrediction'))
 
-console.log(modelPrediction)
 
 let firstMushroom = Object.keys(information)[0]
 let secondMushroom = Object.keys(information)[1]
@@ -144,48 +143,39 @@ function matches(information, answers,userAnswers, values){
     
         // Check if environment matches
         if(answers["environment"].toLowerCase().trim().includes(values[1])){ 
-            console.log("ENVIRONMENT")
             matchCount += 1
         }
         // Check if month matches
         if(values[2].includes(answers["month"].toLowerCase().trim().substring(0,3))){
-            console.log("MONTH")
             matchCount += 1
         }
         // Check if color of cap matches
         if (answers["cap"] == values[3]){
-            console.log("CAP")
             matchCount += 1
         }
         // Check underside
         if (answers["underside"] == values[4]){
-            console.log("underside")
             matchCount += 1
         }
         // Check stem
         if (answers["stem"] == values[5]){
-            console.log("stem")
             matchCount += 1
         }
         // Check smell
         if (answers["smell"] == values[6]){
-            console.log("smell")
             matchCount += 1
         }
         // Check taste
         if (answers["taste"] == values[7]){
-            console.log("taste")
             matchCount += 1
         }
         // check Other
         for (let question in userAnswers) {
             const answer = userAnswers[question];
             if (answer === values[8]) {
-                console.log("other")
                 matchCount += 1
             }
         }
-        console.log(matchCount)
         return matchCount; 
     }
 }

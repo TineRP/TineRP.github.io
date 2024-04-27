@@ -21,7 +21,6 @@ function allowDrop(ev) {
 
 function drop(ev) {
   ev.preventDefault();
-  console.log(ev);
   //var data = ev.dataTransfer.getData("text");
   //ev.target.appendChild(document.getElementById(data));
   
@@ -41,7 +40,6 @@ function drop(ev) {
   //};
   //reader.readAsText(e.dataTransfer.files[0]);  // If text 
   reader.readAsDataURL(ev.dataTransfer.files[0]); // If binary
-  console.log(ev);
 }
 
 //import * as tf from '@tensorflow/tfjs';
@@ -109,10 +107,7 @@ async function predict(imgElement) {
   //status(`Done in ${Math.floor(totalTime1)} ms ` +
     //  `(not including preprocessing: ${Math.floor(totalTime2)} ms)`);
 
-  //HERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHER
   localStorage.setItem('modelPrediction', JSON.stringify(classes));
-  console.log(classes[0])
-  //HERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHERHER
 
   // Show the classes in the DOM.
   showResults(imgElement, classes);
@@ -232,9 +227,6 @@ function showResults(imgElement, classes) {
 
     classElement.appendChild(link);
     row.appendChild(classElement);
-
-    console.log(classes[i].className)
-    console.log(information[classes[i].className])
 
     const probsElement = document.createElement('div');
     probsElement.className = 'cell';

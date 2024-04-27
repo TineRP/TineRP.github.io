@@ -21,7 +21,6 @@ const buttons = document.querySelectorAll('#buttons-container button');
 buttons.forEach((button, index) => {
     button.addEventListener('click', function(e) {
         const selectedOption = e.target.textContent;
-        console.log(selectedOption.trim())
         let answer;
         if (selectedOption.trim() == "Pores: small, sponge-like holes"){
             answer = "Pores";
@@ -34,7 +33,6 @@ buttons.forEach((button, index) => {
         }
 
         /*const mappedOption = optionsMapping[selectedOption];*/
-        console.log(answer)
 
         /*userSelections["underside"] = mappedOption;*/
         userSelections["underside"] = answer;
