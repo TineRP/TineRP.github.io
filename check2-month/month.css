@@ -60,18 +60,18 @@ p {
 .burger-menu {
     position: absolute;
 
-    z-index: 1000; /* Ensure it's above other content */
-    font-size: 32px; /* Adjust this value to change the font size of menu items */
+    z-index: 1000;
+    font-size: 32px; 
     width: 100%;
     font-family: 'Roboto', sans-serif;
 
 }
 
 .burger-icon {
-    width: 150px; /* Adjust this value to change the width of the burger icon */
-    height: 150px; /* Adjust this value to change the height of the burger icon */
-    top: 20px; /* Adjust this value to change the vertical position */
-    right: 5px; /* Adjust this value to change the horizontal position */
+    width: 150px; 
+    height: 150px; 
+    top: 20px; 
+    right: 5px; 
     cursor: pointer;
 }
 
@@ -88,7 +88,7 @@ p {
     top: 70px;
     background-color: #fff;
     border-radius: 5px;
-    font-size: 50px; /* Adjust this value to change the font size of menu items */
+    font-size: 50px; 
   }
   
   .menu-items.show {
@@ -105,7 +105,7 @@ p {
 
   .submenu {
     position: absolute;
-    top: 100%; /* Position it below the main menu item */
+    top: 100%; 
     left: 350px;
     background-color: #fff;
     border-radius: 5px;

@@ -12,13 +12,9 @@ monthDropdown.addEventListener('change', function() {
 
 const storedData = localStorage.getItem('information')
 localStorage.setItem('information', JSON.stringify(JSON.parse(storedData)))
-
 localStorage.setItem('modelPrediction', JSON.stringify(modelPrediction));
 
-  
-
 const submenuItems = document.querySelectorAll('.submenu a');
-
 
 submenuItems.forEach(submenuItem => {
   submenuItem.addEventListener('click', function() {
@@ -31,8 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuItems = document.querySelector('.menu-items');
   const speciesMenuItem = document.getElementById('species-menu');
   const submenu = document.querySelector('.submenu');
-  submenu.style.display = 'none'; // Hide the submenu initially
-
+  submenu.style.display = 'none'; 
 
   burgerIcon.addEventListener('click', function () {
       menuItems.classList.toggle('show');
@@ -40,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   speciesMenuItem.addEventListener('click', function (event) {
   const submenu = this.nextElementSibling;
-  submenu.style.display = submenu.style.display === 'none' ? 'block' : 'none'; // Toggle the submenu
+  submenu.style.display = submenu.style.display === 'none' ? 'block' : 'none'; 
   });
 });
 

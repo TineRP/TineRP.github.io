@@ -92,3 +92,59 @@ p {
     font-size: 40px;
     width: 80%;
 }
+
+
+.burger-menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    font-size: 32px; 
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.burger-icon {
+    width: 150px; 
+    height: 150px; 
+    top: 20px; 
+    right: 5px; 
+    cursor: pointer;
+}
+
+.bar {
+    width: 80%;
+    height: 10px;
+    background-color: rgb(135, 188, 135);
+    margin: 10px 0;
+}
+  
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 50px; 
+  }
+  
+.menu-items.show {
+    display: block;
+}
+  
+.menu-items a {
+    display: block;
+    color: rgb(135, 188, 135);
+    border: 1px solid rgb(135, 188, 135);
+    padding: 10px;
+    text-decoration: none !important;;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%; 
+    left: 350px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
