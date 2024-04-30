@@ -181,9 +181,8 @@ function makeList(information, answers, userAnswers, values, number){
 
       for (let i = 0; i < Object.keys(userAnswers).length; i++){
           const answer = userAnswers[Object.keys(userAnswers)[i]];
-          console.log("answer", answer)
-          console.log("values", values[8])
           if (answer == values[8]) {
+            console.log("correct")
             if (i == 0){
                 other0.push(Object.keys(information)[number])
               } else if (i == 1){
@@ -192,10 +191,22 @@ function makeList(information, answers, userAnswers, values, number){
                 other2.push(Object.keys(information)[number])
               }
             } else if (answer == "No") {
-                console.log("else", Object.keys(information)[number])
+                if(i == 0){
+                    other0.push(Object.keys(information).filter(k => k !== Object.keys(information).filter(key => !information[key].includes(values[8]))[0])[0])
+                    other0.push(Object.keys(information).filter(k => k !== Object.keys(information).filter(key => !information[key].includes(values[8]))[0])[1])
+                }
+                if(i == 1){
+                    other1.push(Object.keys(information).filter(k => k !== Object.keys(information).filter(key => !information[key].includes(values[8]))[0])[0])
+                    other1.push(Object.keys(information).filter(k => k !== Object.keys(information).filter(key => !information[key].includes(values[8]))[0])[1])
+                }
+                if(i == 2){
+                    other2.push(Object.keys(information).filter(k => k !== Object.keys(information).filter(key => !information[key].includes(values[8]))[0])[0])
+                    other2.push(Object.keys(information).filter(k => k !== Object.keys(information).filter(key => !information[key].includes(values[8]))[0])[1])
+                }
             }
 
         }
+        
       }
 
 
@@ -220,15 +231,22 @@ function createParagraph(list, attribute){
     paragraph.innerHTML = paragraph.innerHTML + ". Your answer does not match any of the top three candidates."
 
   }
-  for (let i = 0; i < list.length; i++){
-    if (i == 1 || i == 2){
-      paragraph.innerHTML = paragraph.innerHTML + ' or '
-
-    } 
-    paragraph.innerHTML = paragraph.innerHTML + list[i]
 
 
+  if (list.length == 1){
+    paragraph.innerHTML = paragraph.innerHTML + list[0]
   }
+  else{
+  for (let i = 0; i < 2; i++){
+    if (i == 0){
+        paragraph.innerHTML = paragraph.innerHTML + list[i]
+    }
+    if (i == 1){
+      paragraph.innerHTML = paragraph.innerHTML + ' or '
+      paragraph.innerHTML = paragraph.innerHTML + list[i]
+    }
+  }
+}
 
   answercontainer.appendChild(paragraph);
   
@@ -245,12 +263,12 @@ createParagraph(taste, "taste")
 
 
 for (let i = 0; i < Object.keys(userAnswers).length; i++){
-  if (i == 0){
-    createParagraph(other0, Object.keys(userAnswers)[i])
-  } else if (i == 1){
-    createParagraph(other1, Object.keys(userAnswers)[i])
-  } else if (i == 2){
-    createParagraph(other2, Object.keys(userAnswers)[i])
+    if (i == 0){
+      createParagraph(other0, Object.keys(userAnswers)[i])
+    } else if (i == 1){
+      createParagraph(other1, Object.keys(userAnswers)[i])
+    } else if (i == 2){
+      createParagraph(other2, Object.keys(userAnswers)[i])
+    }
+  
   }
-
-}
