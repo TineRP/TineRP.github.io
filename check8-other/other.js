@@ -2,7 +2,6 @@ const storedData = localStorage.getItem('information')
 const information = JSON.parse(storedData)
 const container = document.getElementById('buttons-container')
 const userSelections = JSON.parse(localStorage.getItem('answers'))
-
 const modelPrediction = JSON.parse(localStorage.getItem('modelPrediction'))
 
 

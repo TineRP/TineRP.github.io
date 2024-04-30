@@ -2,14 +2,26 @@
     display: flex;
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
-    height: 100%; /* Make sure the container takes up the full viewport height */
+    height: 60%; /* Make sure the container takes up the full viewport height */
     flex-direction: column;
-    width: 100%;
     max-width: 100%;
-    
 }
 
+#answer-container{
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  height: 50%; /* Make sure the container takes up the full viewport height */
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+}
   
+#predictedmushroom {
+  text-align: center;
+  font-size: 40px;;
+}
+
 #buttons-container {
     display: flex;
     flex-direction: column;
@@ -39,10 +51,10 @@ img {
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 40px;
-    text-align: center; /* Center the text horizontally */
+    font-size: 30px;
     margin: 10px 0; /* Add margin around the paragraphs */
 }
+
 
 .burger-menu {
     position: absolute;

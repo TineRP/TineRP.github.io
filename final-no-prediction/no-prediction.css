@@ -2,11 +2,20 @@
     display: flex;
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
-    height: 100%; /* Make sure the container takes up the full viewport height */
+    height: 20%; /* Make sure the container takes up the full viewport height */
     flex-direction: column;
-    width: 100%;
     max-width: 100%;
     
+}
+
+#answer-container{
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: left; /* Vertically center the content */
+  height: 70%; /* Make sure the container takes up the full viewport height */
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
 }
 
   
@@ -40,10 +49,10 @@ img {
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
+    margin: 10px;
 }
 .burger-menu {
     position: absolute;
-
     z-index: 1000;
     font-size: 32px; 
     width: 100%;
