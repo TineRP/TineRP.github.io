@@ -103,32 +103,33 @@ body, html {
   z-index: 1000; /* Ensure it's above other content */
   font-size: 16px; /* Adjust this value to change the font size of menu items */
   font-family: 'Roboto', sans-serif;
+  top: 2px;
 
 }
 
 .burger-icon {
-  width: 65px; /* Adjust this value to change the width of the burger icon */
+  width: 60px; /* Adjust this value to change the width of the burger icon */
   height: 45px; /* Adjust this value to change the height of the burger icon */
-  top: 20px; /* Adjust this value to change the vertical position */
-  right: 5px; /* Adjust this value to change the horizontal position */
+  top: 18px; /* Adjust this value to change the vertical position */
   padding-left: 5px;
   cursor: pointer;
 }
 
 .bar {
   width: 80%;
-  height: 3px;
+  height: 4px;
   background-color: rgb(135, 188, 135);
   margin: 5px 0;
 }
 
 .menu-items {
-  display: none;
   position: absolute;
-  top: 70px;
+  top: 28px;
+  left: 5px;
+  width: 260px;
   background-color: #fff;
   border-radius: 5px;
-  font-size: 50px; /* Adjust this value to change the font size of menu items */
+  font-size: 20px; /* Adjust this value to change the font size of menu items */
 }
 
 .menu-items.show {
@@ -139,7 +140,7 @@ body, html {
   display: block;
   color: rgb(135, 188, 135);
   border: 1px solid rgb(135, 188, 135);
-  padding: 10px;
+  padding: 3px;
   text-decoration: none !important;;
 }
 
@@ -147,15 +148,12 @@ body, html {
   display: none;
   position: absolute;
   top: 100%; /* Position it below the main menu item */
-  left: 350px;
+  left: 150px;
   background-color: #fff;
   border-radius: 5px;
-  width: 100%;
+  width: 85.2%;
 }
 
-.menu-items:hover .submenu {
-  display: block; /* Show submenu on hover */
-}
 
 body{
   font-family: 'Roboto', sans-serif;
