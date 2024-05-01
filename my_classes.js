@@ -1,7 +1,7 @@
 export const IMAGENET_CLASSES = {
   0: 'Horse mushroom',
   1: 'Chanterelle',
-  2: 'False chantarelle',
+  2: 'False chanterelle',
   3: 'Wood hedgehog',
   4: 'Oyster mushroom',
   5: 'Cantharellus pallens',

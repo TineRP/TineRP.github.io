@@ -27,13 +27,13 @@ if (firstMushroom === 'Devil\'s bolete' || secondMushroom === 'Devil\'s bolete' 
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'Chantarelle' || secondMushroom === 'Chantarelle' || thirdMushroom === 'Chantarelle') {
+if (firstMushroom === 'Chanterelle' || secondMushroom === 'Chanterelle' || thirdMushroom === 'Chanterelle') {
     const div = document.querySelector('.samecolor');
     div.style.display = "block";
     div.style.textAlign = "center";
 }
 
-if (firstMushroom === 'False chantarelle' || secondMushroom === 'False chantarelle' || thirdMushroom === 'False chantarelle') {
+if (firstMushroom === 'False chanterelle' || secondMushroom === 'False chanterelle' || thirdMushroom === 'False chanterelle') {
     const div = document.querySelector('.velvet');
     div.style.display = "block";
     div.style.textAlign = "center";

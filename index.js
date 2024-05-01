@@ -164,8 +164,8 @@ information["Penny bun"] = ["Edible", "deciduous,coniferous","jul,aug,sep,oct","
 information["Bitter bolete"] = ["Inedible", "deciduous,coniferous","jun,jul,aug,sep,oct","Brown", "Pores","Covered with a dark green netted pattern","No distinct smell", "Bitter", ""]
 information["Summer bolete"] = ["Edible","deciduous","jun,jul,aug,sep,oct,nov","Brown", "Pores","Covered with a light brown netted pattern", "Earthy", "Mild", "Hat is dry"]
 information["Devil's bolete"] = ["Poisonous","deciduous","jul,aug,sep","White","Pores","Red", "Unpleasant rotten smell", "No distinct taste", "When pressed, the mushroom turns greenish/bluish"]
-information["Chantarelle"] = ["Edible","deciduous,coniferous","jun,jul,aug,sep,oct,nov","Yellow","Ridges","Yellow", "Fruity apricot aroma", "Bitter", "The entire mushroom is the same yellowish color"]
-information["False chantarelle"] = ["Inedible","coniferous","sep,oct,nov","Orange","Gills","Orange","No distinct smell", "No distinct taste", "The cap feels like velvet"]
+information["Chanterelle"] = ["Edible","deciduous,coniferous","jun,jul,aug,sep,oct,nov","Yellow","Ridges","Yellow", "Fruity apricot aroma", "Bitter", "The entire mushroom is the same yellowish color"]
+information["False chanterelle"] = ["Inedible","coniferous","sep,oct,nov","Orange","Gills","Orange","No distinct smell", "No distinct taste", "The cap feels like velvet"]
 information["Cantharellus pallens"] = ["Edible","deciduous","jun,jul,aug,sep,oct", "Pale yellow","Gills","Light","Fruity apricot aroma", "Bitter", ""]
 information["Oyster mushroom"] = ["Edible","deciduous,coniferous","jan,feb,mar,apr,maj,jun,jul,aug,sep,oct,nov,dec","Gray or grayish brown", "Gills", "The gills continue down on the stem","Slight anise smell", "Mild", "Grows on trees"]
 information["Sarcomyxa serotina"] = ["Inedible","deciduous","oct,nov,dec,jan,feb,mar","Olive green or yellowish brown","Gills","Yellowish","No distinct smell", "Bitter", "Grows on trees"]
@@ -226,6 +226,7 @@ function showResults(imgElement, classes) {
     });
 
     classElement.appendChild(link);
+    classElement.id="links"
     row.appendChild(classElement);
 
     const probsElement = document.createElement('div');
@@ -246,8 +247,12 @@ function showResults(imgElement, classes) {
   iconTranslation.style.fontSize = "11px";
   iconTranslation.style.textAlign = "left";
 
+  iconTranslation.id = "iconTranslation"
+
+
   probsContainer.appendChild(document.createElement('br'));
   probsContainer.appendChild(iconTranslation)
+  
 
   predictionContainer.appendChild(probsContainer);
 

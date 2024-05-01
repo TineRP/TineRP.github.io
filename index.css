@@ -8,10 +8,12 @@ body, html {
   justify-content: center; /* Center the content horizontally */
   align-items: center; /* Center the content vertically */
   height: 100%; /* Take up the entire viewport height */
+  
 }
 
 .pred-container {
     margin-bottom: 20px;
+    
 
   }
 
@@ -19,14 +21,17 @@ body, html {
     display: inline-block;
     margin-right: 20px;
     vertical-align: top;
+    
   }
 
   #predictions {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 70%;
+    
   }
   
 
@@ -36,7 +41,14 @@ body, html {
   }
   .cell {
     display: table-cell;
-    padding-right: 20px;
+    padding-right: 0px;
+    padding-left: 10px;
+
+    
+  }
+
+  #links{
+    padding-left: 0;
   }
 
 
@@ -62,6 +74,7 @@ body, html {
     border-radius: 5px;
     border-style: none;
     box-shadow: none;
+    
   }
 
   
@@ -154,6 +167,10 @@ body, html {
   width: 85.2%;
 }
 
+#iconTranslation{
+  text-align:center;
+  padding-left: 10px;
+}
 
 body{
   font-family: 'Roboto', sans-serif;
