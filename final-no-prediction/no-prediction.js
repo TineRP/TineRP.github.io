@@ -7,9 +7,6 @@ const modelPrediction = JSON.parse(localStorage.getItem('modelPrediction'))
 
 const container = document.getElementById('question-container')
 
-const paragraph = document.createElement('p');
-paragraph.textContent = 'Sorry, the model is not able to make a confident prediction ☹️';
-container.appendChild(paragraph);
 
 const submenuItems = document.querySelectorAll('.submenu a');
 

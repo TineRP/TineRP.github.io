@@ -20,7 +20,7 @@
       </div>
       <div class="menu-items">
         <a href="../index.html">Home</a>
-        <a href="../menu-modelinfo/menu-modelinfo.html">Information about the model</a>
+        <a href="../menu-modelinfo/menu-modelinfo.html">Information about the tool</a>
         <a href="#" id="species-menu">Information about species</a>
         <div class="submenu">
           <a href="../information/information.html">Penny bun</a>
@@ -39,14 +39,22 @@
           <a href="../information/information.html">Pale oyster</a>
           <a href="../information/information.html">Sarcodon squamosus</a>
           <a href="../information/information.html">Sarcomyxa serotina</a>
+          <a href="../information/information.html">Summer bolete</a>
           <a href="../information/information.html">Wood hedgehog</a>
           <a href="../information/information.html">Yellow stainer</a>
         </div>
       </div>
     </div>
-    <div id="question-container">Hej</div>
+    <h1 id = "header">The Tool</h1>
+    <p id = "toolDescription"> This tool is made for classifying mushrooms. The tool is meant to guide and enhance the user when foraging mushrooms. The tool is not meant to replace the human but is meant as a supplement to empower the human.
+      <br><br> The tool is built upon the Deep Learning model MobileNet which has been trained on images from ImageNet. The model has been retrained on 19 different species of mushroom images to learn the characteristics of these, and the model can therefore only predict these 19 species. The species have been chosen according to the most common species in Denmark. 700 images of each species have been downloaded from GBIF.org and used to retrain the model. 
+      <br><br> Information about the species have been found on svampe.databasen.org and confirmed by a domain expert.
+      <br><br> When the user uploads an image, the model will present the top 3 most likely species. The user is then asked to confirm the classification by giving some information about the different characteristics of the found mushroom. If the answers from the user match the characteristics for one of the species in the top 3 with more than 80% of the characteristics, the tool shows four images of the species that matches the user answers. If the user answers that the four images look like the found mushroom, the tool gives its final prediction. On the final page, the user can learn about the mushroom and see how the given answers matched the characteristics of the mushroom. 
+      <br><br>If the user answers do not match sufficiently, the tool will not be able to make a confident prediction and will instead show the user why it was not able to make a confident prediction.     </p>
+   
         
-  
+    
+    
 
     <script src="menu-modelinfo.js" type="module"></script>
 </div>

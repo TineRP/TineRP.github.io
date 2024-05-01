@@ -1,114 +1,122 @@
 #question-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100%; 
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  
+  
 }
 #buttons-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    width: 100%;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px; 
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  
 }
 
 button {
-    background-color: rgb(135, 188, 135);
-    color: white;
-    border-color: rgb(135, 188, 135);
-    border-radius: 5px;
-    border-style: none;
-    box-shadow: none;
-    width: 100%; 
-    height: 100%; 
-    margin-bottom: 10px; 
-    font-size: 40px;
-
-  }
+  background-color: rgb(135, 188, 135);
+  color: white;
+  border-color: rgb(135, 188, 135);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: none;
+  width: 100%; 
+  height: 100%; 
+  margin-bottom: 10px; 
+  font-size: 40px;
+}
 
 p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  text-align: center;
 }
 
 #stem {
-    width:60%;
-}
-
-#myBar {
-    width: 70%;
-    height: 100%;
-    background-color: rgb(135, 188, 135);
-    text-align: center;
-    line-height: 60px;
-    color: white;
-    font-size: 40px;
-
+  width:60%;
 }
 
 #myProgress {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(233, 245, 233);
+position: relative; /* Ensure relative positioning for the container */
+width: 100%;
+height: 50px; /* Adjust this value as needed */
+font-family: 'Roboto', sans-serif;
+background-color: rgb(233, 245, 233);
+overflow: hidden; /* Ensure overflow is hidden to contain absolute positioned elements */
+margin-top: auto; /* Push the progress bar to the bottom */
+}
+
+#myBar {
+position: absolute;
+bottom: 0; /* Position at the bottom */
+width: 60%;
+height: 100%;
+background-color: rgb(135, 188, 135);
+text-align: center;
+color: white;
+font-size: 35px;
 }
 
 
 .burger-menu {
-    position: absolute;
+  position: absolute;
 
-    z-index: 1000;
-    font-size: 32px; 
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
+  z-index: 1000;
+  font-size: 32px; 
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
 
 }
 
 .burger-icon {
-    width: 150px; 
-    height: 150px; 
-    top: 20px; 
-    right: 5px; 
-    cursor: pointer;
+  width: 150px; 
+  height: 150px; 
+  top: 20px; 
+  right: 5px; 
+  cursor: pointer;
 }
 
-  .bar {
-    width: 80%;
-    height: 10px;
-    background-color: rgb(135, 188, 135);
-    margin: 10px 0;
-  }
-  
-  .menu-items {
-    display: none;
-    position: absolute;
-    top: 70px;
-    background-color: #fff;
-    border-radius: 5px;
-    font-size: 50px; 
-  }
-  
-  .menu-items.show {
-    display: block;
-  }
-  
-  .menu-items a {
-    display: block;
-    color: rgb(135, 188, 135);
-    border: 1px solid rgb(135, 188, 135);
-    padding: 10px;
-    text-decoration: none !important;;
-  }
+.bar {
+  width: 80%;
+  height: 10px;
+  background-color: rgb(135, 188, 135);
+  margin: 10px 0;
+}
 
-  .submenu {
-    position: absolute;
-    top: 100%; 
-    left: 350px;
-    background-color: #fff;
-    border-radius: 5px;
-    width: 100%;
+.menu-items {
+  display: none;
+  position: absolute;
+  top: 70px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 50px; 
+}
+
+.menu-items.show {
+  display: block;
+}
+
+.menu-items a {
+  display: block;
+  color: rgb(135, 188, 135);
+  border: 1px solid rgb(135, 188, 135);
+  padding: 10px;
+  text-decoration: none !important;;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%; 
+  left: 350px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
 }

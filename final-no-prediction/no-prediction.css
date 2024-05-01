@@ -18,7 +18,12 @@
   max-width: 100%;
 }
 
-  
+h1{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 60px;
+}
+
 #buttons-container {
     display: flex;
     flex-direction: column;

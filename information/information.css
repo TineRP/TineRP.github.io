@@ -40,6 +40,9 @@ img {
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-break: break-all;
 }
 
 .burger-menu {
@@ -50,6 +53,13 @@ p {
     width: 100%;
     font-family: 'Roboto', sans-serif;
 
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 150px;
 }
 
 .burger-icon {

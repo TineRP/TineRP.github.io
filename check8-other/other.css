@@ -4,6 +4,8 @@
     align-items: center; 
     flex-direction: column;
     margin: 0;
+    padding-top: 120px;
+    
 }
 
 #questions {
@@ -35,31 +37,33 @@ button {
     border-radius: 5px;
     border-style: none;
     box-shadow: none;
-    width: 150px;
-    height: 60px;
+    width: 200px;
+    height: 80px;
     margin: 0 5px; 
-    font-size: 24px;
+    font-size: 40px;
 }
 
 #continue-button {
     display: block;
     margin: 20px auto; 
-    background-color: rgb(135, 188, 135);
+    background-color: rgb(118, 117, 113);
     color: white;
-    border-color: rgb(135, 188, 135);
+    border-color: rgb(0, 0, 0);
     border-radius: 5px;
-    border-style: none;
+    border-width: 3px;
+    border-style: solid;
     box-shadow: none;
-    width: 150px;
-    height: 60px;
-    font-size: 24px;
-    display: block;
+    width: 400px;
+    height: 80px;
+    font-size: 40px;
+    margin-top: 500px;
+
 }
 
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 #stem {
@@ -140,4 +144,9 @@ p {
     background-color: #fff;
     border-radius: 5px;
     width: 100%;
+}
+
+.tfjs-example-container{
+    padding-top: 150px;
+
 }

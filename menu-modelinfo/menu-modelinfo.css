@@ -1,13 +1,4 @@
-#question-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100%;
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    
-}
+
 
   
 #buttons-container {
@@ -17,6 +8,21 @@
     width: 100%;
     height: 100%;
     align-items: center;
+}
+
+#toolDescription{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-break: break-all;
+}
+
+#header{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 120px;
 }
 
 button {
