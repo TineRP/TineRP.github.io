@@ -1,17 +1,17 @@
 #question-container {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    height: 60%; /* Make sure the container takes up the full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    height: 60%; 
     flex-direction: column;
     max-width: 100%;
 }
 
 #answer-container{
   display: flex;
-  justify-content: center; /* Horizontally center the content */
-  align-items: center; /* Vertically center the content */
-  height: 50%; /* Make sure the container takes up the full viewport height */
+  justify-content: center; 
+  align-items: center; 
+  height: 50%; 
   flex-direction: column;
   width: 100%;
   max-width: 100%;
@@ -25,7 +25,7 @@
 #buttons-container {
     display: flex;
     flex-direction: column;
-    margin-top: 10px; /* Adjust as needed */
+    margin-top: 10px; 
     width: 100%;
     height: 100%;
     align-items: center;
@@ -38,9 +38,9 @@ button {
     border-radius: 5px;
     border-style: none;
     box-shadow: none;
-    width: 100%; /* Set the width as needed */
-    height: 100%; /* Set the height as needed */
-    margin-bottom: 10px; /* Add margin between buttons */
+    width: 100%; 
+    height: 100%; 
+    margin-bottom: 10px;
     font-size: 40px;  }
 
 img {
@@ -52,7 +52,7 @@ img {
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
-    margin: 10px 0; /* Add margin around the paragraphs */
+    margin: 10px 0; 
 }
 
 

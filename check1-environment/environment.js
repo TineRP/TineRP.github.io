@@ -2,7 +2,6 @@ const modelPrediction = JSON.parse(localStorage.getItem('modelPrediction'))
 
 const buttons = document.querySelectorAll('#buttons-container button');
 
-// Initialize an object to store user selections
 const userSelections = {environment: "", month: "", cap: "", underside: "", stem: "", smell: "", taste: "", other: ""};
 
 

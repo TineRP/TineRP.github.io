@@ -1,19 +1,16 @@
 #question-container {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    /*height: 100%; /* Make sure the container takes up the full viewport height */
+    justify-content: center; 
+    align-items: center; 
     flex-direction: column;
-    /*width: 100%;
-    max-width: 100%;*/
     margin: 0;
 }
 
 #questions {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    height: 100%; /* Make sure the container takes up the full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
     flex-direction: column;
     width: 100%;
     max-width: 100%;
@@ -22,13 +19,13 @@
 }
 
 #options-container {
-    display: flex; /* Change to flex */
-    flex-direction: row; /* Display buttons horizontally */
-    margin-top: 10px; /* Adjust as needed */
+    display: flex; 
+    flex-direction: row; 
+    margin-top: 10px; 
     width: 100%;
-    height: auto; /* Adjust the height */
+    height: auto; 
     align-items: center;
-    justify-content: center; /* Horizontally center buttons */
+    justify-content: center; 
 }
 
 button {
@@ -38,25 +35,21 @@ button {
     border-radius: 5px;
     border-style: none;
     box-shadow: none;
-    /* Adjust button size */
     width: 150px;
     height: 60px;
-    margin: 0 5px; /* Add margin between buttons */
+    margin: 0 5px; 
     font-size: 24px;
 }
 
 #continue-button {
-    /* Center the button horizontally */
     display: block;
-    margin: 20px auto; /* Adjust margin as needed */
-    /* Style the button */
+    margin: 20px auto; 
     background-color: rgb(135, 188, 135);
     color: white;
     border-color: rgb(135, 188, 135);
     border-radius: 5px;
     border-style: none;
     box-shadow: none;
-    /* Adjust button size */
     width: 150px;
     height: 60px;
     font-size: 24px;
@@ -74,9 +67,9 @@ p {
 }
 
 #myProgress {
-    position: fixed; /* Fixed positioning to keep it at the bottom */
-    bottom: 0; /* Align to the bottom of the viewport */
-    left: 0; /* Start from the left edge */
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
     width: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: rgb(233, 245, 233);

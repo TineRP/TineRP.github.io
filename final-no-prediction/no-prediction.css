@@ -1,8 +1,8 @@
 #question-container {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    height: 20%; /* Make sure the container takes up the full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    height: 20%;
     flex-direction: column;
     max-width: 100%;
     
@@ -10,9 +10,9 @@
 
 #answer-container{
   display: flex;
-  justify-content: center; /* Horizontally center the content */
-  align-items: left; /* Vertically center the content */
-  height: 70%; /* Make sure the container takes up the full viewport height */
+  justify-content: center;
+  align-items: left; 
+  height: 70%; 
   flex-direction: column;
   width: 100%;
   max-width: 100%;
@@ -22,7 +22,7 @@
 #buttons-container {
     display: flex;
     flex-direction: column;
-    margin-top: 10px; /* Adjust as needed */
+    margin-top: 10px; 
     width: 100%;
     height: 100%;
     align-items: center;
@@ -35,9 +35,9 @@ button {
     border-radius: 5px;
     border-style: none;
     box-shadow: none;
-    width: 100%; /* Set the width as needed */
-    height: 100%; /* Set the height as needed */
-    margin-bottom: 10px; /* Add margin between buttons */
+    width: 100%; 
+    height: 100%; 
+    margin-bottom: 10px; 
     font-size: 40px;  }
 
 img {
