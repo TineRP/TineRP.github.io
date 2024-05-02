@@ -175,7 +175,7 @@ information["Wood hedgehog"] = ["Edible", "deciduous", "aug,sep,oct,nov","Creme"
 information["Depressed hedgehog"] = ["Edible", "deciduous", "aug,sep,oct,nov,dec,jan","Orangish yellow to abricot orange", "Teeth","Light", "No distinct smell", "Bitter", "The cap has a belly button-like center"]
 information["Sarcodon squamosus"] = ["Inedible", "coniferous", "jun,jul,aug,sep,oct","Dark purple scales with a brownish background", "Teeth","Pale", "No distinct smell", "Bitter", ""]
 information["Dryad's saddle"] = ["Edible", "deciduous", "apr,maj,jun,jul,aug,sep","Brownish scales with a whitish background","Pores","Dark", "Slightly of watermelon", "No distinct taste", ""]
-information["Field mushroom"] = ["Edible", "grass", "jul,aug,sep,oct","White", "Pores", "White with a thin ring","No distinct smell", "Tastes like a supermarket-mushroom", ""]
+information["Field mushroom"] = ["Edible", "grass", "jul,aug,sep,oct","White", "Gills", "White with a thin ring","No distinct smell", "Tastes like a supermarket-mushroom", ""]
 information["Horse mushroom"] = ["Edible", "grass", "jun,jul,aug,sep,oct","White","Gills", "White with a thin ring", "Anise","Tastes like a supermarket-mushroom", "When pressed, the mushroom turns yellow"]
 information["Yellow stainer"] = ["Poisonous", "deciduous,coniferous", "jul,aug,sep,oct","White","Gills", "White but yellow at the base of the stem","Chemical smell", "Chemical taste", "When pressed, the mushroom turns yellow"]
 information["Common puffball"] = ["Edible", "deciduous,coniferous", "aug,sep,oct","White and covered with spikes","The cap is shaped like a ball, which means the underside is the same as the cap","White","No distinct smell","Mild", "Only edible if the meat is white"]
@@ -266,7 +266,7 @@ function showResults(imgElement, classes) {
 
   const eftertjekButton = document.createElement('button');
   eftertjekButton.id = "eftertjekButton";
-  eftertjekButton.innerText = "Confirm it";
+  eftertjekButton.innerText = "Identify";
   eftertjekButton.style.width = IMAGE_SIZE + "px";
   eftertjekButton.addEventListener('click', function() {
     
