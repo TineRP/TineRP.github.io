@@ -26,6 +26,10 @@ for (let i = 0; i < Object.keys(information).length; i++) {
     }
 }
 
+const button = document.createElement("button");
+button.textContent = "Not sure";
+container.append(button);
+
 const buttons = document.querySelectorAll('#buttons-container button');
 
 buttons.forEach(button => {
