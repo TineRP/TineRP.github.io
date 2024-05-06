@@ -175,7 +175,7 @@ information["Wood hedgehog"] = ["Edible", "deciduous", "aug,sep,oct,nov","Creme"
 information["Depressed hedgehog"] = ["Edible", "deciduous", "aug,sep,oct,nov,dec,jan","Orangish yellow to abricot orange", "Teeth","Light", "No distinct smell", "Bitter", "The cap has a belly button-like center"]
 information["Sarcodon squamosus"] = ["Inedible", "coniferous", "jun,jul,aug,sep,oct","Dark purple scales with a brownish background", "Teeth","Pale", "No distinct smell", "Bitter", ""]
 information["Dryad's saddle"] = ["Edible", "deciduous", "apr,maj,jun,jul,aug,sep","Brownish scales with a whitish background","Pores","Dark", "Slightly of watermelon", "No distinct taste", ""]
-information["Field mushroom"] = ["Edible", "grass", "jul,aug,sep,oct","White", "Gills", "White with a thin ring","No distinct smell", "Tastes like a supermarket-mushroom", ""]
+information["Field mushroom"] = ["Edible", "grass", "jul,aug,sep,oct","White", "Pores", "White with a thin ring","No distinct smell", "Tastes like a supermarket-mushroom", ""]
 information["Horse mushroom"] = ["Edible", "grass", "jun,jul,aug,sep,oct","White","Gills", "White with a thin ring", "Anise","Tastes like a supermarket-mushroom", "When pressed, the mushroom turns yellow"]
 information["Yellow stainer"] = ["Poisonous", "deciduous,coniferous", "jul,aug,sep,oct","White","Gills", "White but yellow at the base of the stem","Chemical smell", "Chemical taste", "When pressed, the mushroom turns yellow"]
 information["Common puffball"] = ["Edible", "deciduous,coniferous", "aug,sep,oct","White and covered with spikes","The cap is shaped like a ball, which means the underside is the same as the cap","White","No distinct smell","Mild", "Only edible if the meat is white"]
@@ -270,14 +270,19 @@ function showResults(imgElement, classes) {
   eftertjekButton.style.width = IMAGE_SIZE + "px";
   eftertjekButton.addEventListener('click', function() {
     
-    // Filter information based on classes
-   
-    
+  
+  
   
 
     // Open new page
     window.location.href = 'check1-environment/environment.html'
 });
+  const tekst = document.createElement('p');
+  tekst.style.width = IMAGE_SIZE + "px";
+  tekst.style.wordBreak = 'break-word'
+  tekst.style.fontSize =  '12.5px' ;
+  tekst.textContent = "This prediction alone should not be trusted. Press the identify button and go through the questions to get a confident prediction."  
+  
 
   const filteredInformation = filterInformationByClasses(information, classes);
       
@@ -287,6 +292,7 @@ function showResults(imgElement, classes) {
 
   predictionsElement.appendChild(document.createElement('br'));
   predictionsElement.appendChild(eftertjekButton);
+  predictionsElement.appendChild(tekst);
 }
 
 const filesElement = document.getElementById('files');
